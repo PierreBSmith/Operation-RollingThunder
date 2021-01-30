@@ -41,10 +41,10 @@ GameObject:
   - component: {fileID: 5032370317965597119}
   - component: {fileID: 5032370317965597104}
   - component: {fileID: 5032370317965597106}
-  - component: {fileID: 5032370317965597105}
+  - component: {fileID: 820993304}
   m_Layer: 0
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: Arms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5032370317965597105
+--- !u!114 &820993304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,16 +122,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5032370317965597118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15967dea28579994c9932963fb74a646, type: 3}
+  m_Script: {fileID: 11500000, guid: 1edcd68c7fa042f4cbd7b61633810191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bodyPart: {fileID: 11400000, guid: eadf60caecc63654196bf079e434c572, type: 2}
   speed: 5
-  climbSpeed: 5
-  climbTime: 10
+  jumpMultiplier: 3
+  climbSpeed: 3
+  climbTime: 2
   wallCheck: {fileID: 990794641}
   whatIsWall:
     serializedVersion: 2
     m_Bits: 256
+  jumpForce: 0
 --- !u!1 &5032370318219940400
 GameObject:
   m_ObjectHideFlags: 0

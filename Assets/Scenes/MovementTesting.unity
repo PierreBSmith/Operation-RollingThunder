@@ -204,12 +204,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &820993302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5032370317965597118, guid: e495a0ce45e3372409609fe730fee2c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5032370317157221544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &820993303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5032370317965597119, guid: e495a0ce45e3372409609fe730fee2c2,
     type: 3}
   m_PrefabInstance: {fileID: 5032370317157221544}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &820993304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820993302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edcd68c7fa042f4cbd7b61633810191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bodyPart: {fileID: 11400000, guid: eadf60caecc63654196bf079e434c572, type: 2}
+  speed: 5
+  jumpMultiplier: 0
+  climbSpeed: 0
+  climbTime: 0
+  wallCheck: {fileID: 0}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpForce: 0
 --- !u!1 &1176452224
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,5 +566,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5032370317965597105, guid: e495a0ce45e3372409609fe730fee2c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e495a0ce45e3372409609fe730fee2c2, type: 3}

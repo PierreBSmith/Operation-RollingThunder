@@ -8,7 +8,7 @@ public class BodyPartMovement : MonoBehaviour
     public BodyPart _bodyPart;
     [SerializeField] private float speed;
     private bool grounded;
-    private RigidBody2D _r2D;
+    private Rigidbody2D _r2D;
     private Animator _animator;
 
     [Header("Torso")]
@@ -30,9 +30,9 @@ public class BodyPartMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _r2D = GetComponent<RigidBody2D>();
+        _r2D = GetComponent<Rigidbody2D>();
         
-        if (_bodyPart.partType == _bodyPart.PartType.Legs)
+        if (_bodyPart.partType == BodyPart.PartType.Legs)
         {
             _animator = GetComponent<Animator>();
         }
@@ -97,6 +97,7 @@ public class BodyPartMovement : MonoBehaviour
             climbing = false;
             _r2D.gravityScale = 1f;
         }
+        //TODO: Add picking up boxes and stuff.
     }
 
     private void Climb()
