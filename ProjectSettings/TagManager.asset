@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lava
+    uniqueID: 355005079
+    locked: 0
+  - name: Barriers
+    uniqueID: 1948941329
+    locked: 0
+  - name: Traps
+    uniqueID: 3087581533
+    locked: 0
+  - name: Player
+    uniqueID: 3773698169
+    locked: 0
