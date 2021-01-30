@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShermHead
   m_EditorClassIdentifier: 
   partType: 0
-  weight: 0
+  weight: 1
