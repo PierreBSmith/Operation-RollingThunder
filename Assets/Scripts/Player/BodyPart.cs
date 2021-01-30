@@ -12,7 +12,8 @@ public class BodyPart : ScriptableObject
         Legs,
         Arms
     }
-
+    
     public PartType partType;
     public int weight;
+    public Sprite partAppearance;
 }
