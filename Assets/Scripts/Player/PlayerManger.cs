@@ -10,7 +10,7 @@ public class PlayerManger : MonoBehaviour
     [SerializeField] private BodyCollection baseBodyCollection;
     [SerializeField] private int baseWeight;
     
-    private BodyCollection _bodyCollection;
+    [HideInInspector] public BodyCollection _bodyCollection;
     private void Awake()
     {
         _bodyCollection = Instantiate(baseBodyCollection);

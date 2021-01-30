@@ -22,6 +22,8 @@ public class BodyPartMovement : MonoBehaviour
     private float curClimbTime;
     private bool climbing;
     private float checkRadius = 0.1f;
+    private bool carrying;
+    private GameObject canCarryObject;
 
     [Header("Leg")]
     [SerializeField] private float jumpForce;
@@ -30,7 +32,7 @@ public class BodyPartMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _r2D = GetComponent<Rigidbody2D>();
+        _r2D = transform.parent.gameObject.GetComponent<Rigidbody2D>();
         
         if (_bodyPart.partType == BodyPart.PartType.Legs)
         {
@@ -38,6 +40,7 @@ public class BodyPartMovement : MonoBehaviour
         }
         curClimbTime = 0f;
         climbing = false;
+        carrying = false;
     }
 
     void OnCollisionStay2D(Collision2D collider)
@@ -54,14 +57,32 @@ public class BodyPartMovement : MonoBehaviour
         grounded = false;
     }
 
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if(collider.gameObject.CompareTag("Box"))
+        {
+            canCarryObject = collider.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if(collider.gameObject.CompareTag("Box"))
+        {
+            canCarryObject = null;
+        }
+    }
+
     public void HeadMovement()
     {
         float input = Input.GetAxis("Horizontal");
+        _r2D.constraints = RigidbodyConstraints2D.None;
         _r2D.velocity = new Vector2(input * speed, 0);
     }
 
     public void TorsoMovement()
     {
+        _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
         if(input != 0 && grounded)
         {
@@ -72,6 +93,7 @@ public class BodyPartMovement : MonoBehaviour
 
     public void ArmMovement()
     {
+        _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
         _r2D.velocity = new Vector2(input * speed, 0);
         if(climbing)
@@ -98,6 +120,8 @@ public class BodyPartMovement : MonoBehaviour
             _r2D.gravityScale = 1f;
         }
         //TODO: Add picking up boxes and stuff.
+        PickUp();
+        PutDown();
     }
 
     private void Climb()
@@ -116,8 +140,29 @@ public class BodyPartMovement : MonoBehaviour
         }
     }
 
+    private void PickUp()
+    {
+        if(canCarryObject)
+        {
+            if(Input.GetKey(KeyCode.LeftShift) && !carrying)
+            {
+                carrying = true;
+                canCarryObject.transform.parent = gameObject.transform.parent;
+            }
+        }
+    }
+    private void PutDown()
+    {
+        if(Input.GetKey(KeyCode.LeftShift) && carrying)
+        {
+            carrying = false;
+            canCarryObject.transform.parent = null;
+        }
+    }
+    
     public void LegMovement()
     {
+        _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
         if(Input.GetKey(KeyCode.Space) && grounded)

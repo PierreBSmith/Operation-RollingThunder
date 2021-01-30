@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private PlayerManager playerManager;
+    private PlayerManger playerManager;
     private Rigidbody2D _r2D;
-    private GameObject[] collectedBodyParts;
+    private GameObject mainBodyPart;
 
-    private enum BodyState
+    public enum BodyState
     {
         HEAD,
         TORSO,
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         ARM_LEG_HEAD,
         ALL_PARTS
     }
-    private BodyState _bodyState;
+    public BodyState _bodyState;
     
     public void SetBodyState()
     {
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
                 else
                 {
                     //only head and legs
-                    _bodState = BodyState.LEG;
+                    _bodyState = BodyState.LEG;
                 }
             }
             else if(playerManager._bodyCollection.arms)
@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _bodyState = BodyState.HEAD;
+        mainBodyPart = gameObject.transform.GetChild(0).gameObject;
     }
 
     void FixedUpdate()
@@ -87,29 +88,29 @@ public class PlayerMovement : MonoBehaviour
         switch(_bodyState)
         {
             case BodyState.HEAD:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().HeadMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().HeadMovement();
                 break;
             case BodyState.TORSO:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().TorsoMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 break;
             case BodyState.LEG:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().LegMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ARM_HEAD:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().ArmMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().ArmMovement();
                 //add throwing
                 break;
             case BodyState.ARM_HEAD_TORSO:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().TorsoMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 //add throwing
                 break;
             case BodyState.ARM_LEG:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().LegMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ALL_PARTS:
             case BodyState.ARM_LEG_HEAD:
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().ArmMovement();
-                gameObject.transform.GetChild(0).gameObject.GetComponent<BodyPartMovement>().LegMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().ArmMovement();
+                mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 //add throwing
                 break;
         }
