@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3395198273935459269}
   - component: {fileID: 3395198273935459274}
-  - component: {fileID: 3395198273935459275}
   - component: {fileID: 3395198273935459272}
-  - component: {fileID: 3395198273935459273}
+  - component: {fileID: 1814591984}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Head
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3395198273935459275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3395198273935459278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a0bf39d655a084383321fadad0c5f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _r2D: {fileID: 0}
-  speed: 5
 --- !u!58 &3395198273935459272
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,24 +100,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
---- !u!50 &3395198273935459273
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1814591984
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3395198273935459278}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edcd68c7fa042f4cbd7b61633810191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bodyPart: {fileID: 11400000, guid: d6f0d66fd18084444b1a4b4085b2fa39, type: 2}
+  speed: 5
+  jumpMultiplier: 0
+  climbSpeed: 0
+  climbTime: 0
+  wallCheck: {fileID: 0}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpForce: 0

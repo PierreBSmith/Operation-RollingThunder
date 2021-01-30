@@ -61,7 +61,9 @@ public class BodyPartMovement : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Box"))
         {
+            Debug.Log("Found object");
             canCarryObject = collider.gameObject;
+            Debug.Log(canCarryObject.name);
         }
     }
 
@@ -69,6 +71,7 @@ public class BodyPartMovement : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Box"))
         {
+            Debug.Log("Leaving Object");
             canCarryObject = null;
         }
     }
@@ -146,6 +149,7 @@ public class BodyPartMovement : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.LeftShift) && !carrying)
             {
+                Debug.Log("Entering carrying");
                 carrying = true;
                 canCarryObject.transform.parent = gameObject.transform.parent;
             }
