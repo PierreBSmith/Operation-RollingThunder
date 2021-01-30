@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class MovingPlatform : Toggleable
+public class LockingPlatform : Toggleable
 {
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
@@ -16,12 +15,13 @@ public class MovingPlatform : Toggleable
     private bool _flipped;
     private float _durationMoved;
     private Rigidbody2D _body;
-
+    
     private void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
         moveDirection = moveDirection.normalized;
     }
+
 
     public override void ActivatedFunction()
     {
@@ -32,35 +32,38 @@ public class MovingPlatform : Toggleable
 
     public override void DeactivatedFunction()
     {
-        _isOn = false;
-        _isMoving = false;
-        _body.velocity = Vector2.zero;
+        StartCoroutine(DeactivateDelay());
     }
 
-    private IEnumerator CyclePause()
+    private IEnumerator DeactivateDelay()
     {
-        _isMoving = false;
-        
         yield return new WaitForSeconds(pauseDuration);
-        if (_isOn)
-        {
-            _isMoving = true;
-            _body.velocity = moveDirection * moveSpeed;
-        }
-
+        _isOn = false;
+        _isMoving = true;
+        _body.velocity = moveDirection * -moveSpeed;
     }
+
     private void Update()
     {
-        if (_isOn && _isMoving)
+        if (_isMoving)
         {
-            _durationMoved += Time.deltaTime;
-            if (_durationMoved >= moveDuration)
+            if (_isOn)
             {
-                _durationMoved = 0;
-                moveDirection *= -1;
-                _flipped = !_flipped;
-                _body.velocity = Vector2.zero;
-                StartCoroutine(CyclePause());
+                _durationMoved += Time.deltaTime;
+                if (_durationMoved >= moveDuration)
+                {
+                    _isMoving = false;
+                    _body.velocity = Vector2.zero;
+                }
+            }
+            else
+            {
+                _durationMoved -= Time.deltaTime;
+                if (_durationMoved <= 0)
+                {
+                    _isMoving = false;
+                    _body.velocity = Vector2.zero;
+                }
             }
         }
     }
