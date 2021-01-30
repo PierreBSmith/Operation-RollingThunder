@@ -10,6 +10,7 @@ public class LegMovement : MonoBehaviour
     private Rigidbody2D _r2D;
     private Animator _animator;
     private bool grounded;
+    private bool jumping;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class LegMovement : MonoBehaviour
         if(collider.gameObject.tag == "Floor")
         {
             grounded = true;
+            jumping = false;
         }
     }
 
@@ -43,7 +45,7 @@ public class LegMovement : MonoBehaviour
         Jump();
         float input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
-        if (input != 0)
+        if (input != 0 && !jumping)
         {
             _r2D.velocity = new Vector2(speed * input, 0);
             _animator.SetBool("Walking", true);
@@ -54,9 +56,9 @@ public class LegMovement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space) && grounded)
         {
-            Debug.Log("Jumping");
-            Vector2 jump = new Vector2(0, jumpForce);
+            Vector2 jump = new Vector2(_r2D.velocity.x, jumpForce);
             _r2D.AddForce(jump);
+            jumping = true;
         }
     }
 }
