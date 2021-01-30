@@ -10,8 +10,6 @@ public class TorsoMovement : MonoBehaviour
     private Rigidbody2D _r2D;
     private bool grounded;
 
-    private Vector2 force;
-
     void OnCollisionEnter2D(Collision2D collider)
     {
         if(collider.gameObject.tag == "Floor")
