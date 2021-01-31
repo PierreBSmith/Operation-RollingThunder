@@ -12,10 +12,11 @@ public class PlayerInventory : MonoBehaviour
 
     private GameObject _nearestBodyPart;
     [HideInInspector] public BodyCollection bodyCollection;
+    [SerializeField] private GameObject head;
+    [SerializeField] private GameObject torso;
+    [SerializeField] private GameObject leg;
+    [SerializeField] private GameObject arm;
 
-    
-    
-    
     private void Awake()
     {
         bodyCollection = Instantiate(baseBodyCollection);
@@ -55,20 +56,25 @@ public class PlayerInventory : MonoBehaviour
         {
             case BodyPart.PartType.Head:
                 bodyCollection.head = newestPart;
+                head.SetActive(true);
                 break;
             case BodyPart.PartType.Arms:
                 bodyCollection.arms = newestPart;
+                arm.SetActive(true);
                 break;
             case BodyPart.PartType.Legs:
                 bodyCollection.legs = newestPart;
+                leg.SetActive(true);
                 break;
             case BodyPart.PartType.Torso:
                 bodyCollection.torso = newestPart;
+                torso.SetActive(true);
                 break;
         }
         RecalcWeight();
         // Make a call to update the player's body state
         _nearestBodyPart.SetActive(false);
+        GetComponent<PlayerMovement>().SetBodyState();
     }
 
     private void Update()
