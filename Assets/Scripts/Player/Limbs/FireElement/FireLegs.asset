@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b03fc364a81e240a3dad78699528a6, type: 3}
   m_Name: FireLegs
   m_EditorClassIdentifier: 
-  partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  partType: 2
+  weight: 1
+  partAppearance: {fileID: 21300000, guid: 146a99b835c50f748ac12875c28797e6, type: 3}

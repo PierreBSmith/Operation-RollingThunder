@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: UnicornHead
   m_EditorClassIdentifier: 
   partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  weight: 1
+  partAppearance: {fileID: 21300000, guid: 5ae0293a5e8e71f4fb90dd7fcf008d54, type: 3}
