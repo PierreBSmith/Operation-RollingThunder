@@ -1671,7 +1671,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f96125a77764ab4458c95058dff48d5e, type: 3}
-  m_Color: {r: 0.3584906, g: 0.08257093, b: 0, a: 1}
+  m_Color: {r: 0.033499062, g: 0.35686275, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1689,8 +1689,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157384685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122.72, y: -0.12, z: 0}
-  m_LocalScale: {x: 0.5428314, y: 0.5545498, z: 1}
+  m_LocalPosition: {x: 123.044, y: 0.121, z: 0}
+  m_LocalScale: {x: 1.1913528, y: 1.0363076, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 86
@@ -1734,9 +1734,10 @@ GameObject:
   m_Component:
   - component: {fileID: 159595086}
   - component: {fileID: 159595087}
+  - component: {fileID: 159595088}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1805,6 +1806,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &159595088
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159595085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &160481187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2761,7 +2791,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f96125a77764ab4458c95058dff48d5e, type: 3}
-  m_Color: {r: 0.24528301, g: 0.086980335, b: 0.026610898, a: 1}
+  m_Color: {r: 0.07438948, g: 0.5, b: 0.040094346, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3246,8 +3276,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234202788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.355, y: 32.033, z: 0}
-  m_LocalScale: {x: 3.6537552, y: 0.73462343, z: 1}
+  m_LocalPosition: {x: -84.49, y: 33.04, z: 0}
+  m_LocalScale: {x: 3.6537552, y: 0.43579668, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 131
@@ -3291,9 +3321,10 @@ GameObject:
   m_Component:
   - component: {fileID: 237216500}
   - component: {fileID: 237216501}
+  - component: {fileID: 237216502}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3362,6 +3393,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &237216502
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237216499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &257153908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3412,7 +3472,7 @@ PrefabInstance:
     - target: {fileID: 1615485428459039066, guid: c2119864d04884f45b56bdd924f62efa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 1615485428459039066, guid: c2119864d04884f45b56bdd924f62efa,
         type: 3}
@@ -4240,9 +4300,10 @@ GameObject:
   m_Component:
   - component: {fileID: 296565521}
   - component: {fileID: 296565522}
+  - component: {fileID: 296565523}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4311,6 +4372,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &296565523
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296565520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &304790510
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,9 +5099,10 @@ GameObject:
   m_Component:
   - component: {fileID: 325529244}
   - component: {fileID: 325529245}
+  - component: {fileID: 325529246}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5080,6 +5171,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &325529246
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325529243}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &325947001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,8 +5276,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325947001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.065, y: 15.735, z: 0}
-  m_LocalScale: {x: 125.69469, y: 0.707366, z: 1}
+  m_LocalPosition: {x: -64.625, y: 15.735, z: 0}
+  m_LocalScale: {x: 124.5743, y: 0.707366, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 88
@@ -5475,9 +5595,10 @@ GameObject:
   m_Component:
   - component: {fileID: 341558417}
   - component: {fileID: 341558418}
+  - component: {fileID: 341558419}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5546,6 +5667,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &341558419
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341558416}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &345072850
 GameObject:
   m_ObjectHideFlags: 0
@@ -6836,8 +6986,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463730234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.09, y: 21.608, z: 0}
-  m_LocalScale: {x: 9.073875, y: 0.92015934, z: 1}
+  m_LocalPosition: {x: -74.09, y: 21.861, z: 0}
+  m_LocalScale: {x: 9.073875, y: 0.4145665, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 125
@@ -7324,7 +7474,7 @@ PrefabInstance:
     - target: {fileID: 6910638638544920469, guid: d704f729b80e3ea41b06dba9b328e5a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1720939
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6910638638544920469, guid: d704f729b80e3ea41b06dba9b328e5a7,
         type: 3}
@@ -7488,9 +7638,10 @@ GameObject:
   m_Component:
   - component: {fileID: 505677194}
   - component: {fileID: 505677195}
+  - component: {fileID: 505677196}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7559,6 +7710,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &505677196
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505677193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7750,9 +7930,10 @@ GameObject:
   m_Component:
   - component: {fileID: 523379482}
   - component: {fileID: 523379481}
+  - component: {fileID: 523379483}
   m_Layer: 0
   m_Name: Vine _2 (2)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7826,6 +8007,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 118
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &523379483
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523379480}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &542991387
 GameObject:
   m_ObjectHideFlags: 0
@@ -8058,9 +8268,10 @@ GameObject:
   m_Component:
   - component: {fileID: 546014986}
   - component: {fileID: 546014987}
+  - component: {fileID: 546014988}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8129,6 +8340,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &546014988
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546014985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &550009992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,9 +8617,10 @@ GameObject:
   m_Component:
   - component: {fileID: 583524439}
   - component: {fileID: 583524440}
+  - component: {fileID: 583524441}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8448,6 +8689,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &583524441
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583524438}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &590754186
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,6 +9010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 597167620}
   - component: {fileID: 597167619}
+  - component: {fileID: 597167621}
   m_Layer: 0
   m_Name: Crate (1)
   m_TagString: Box
@@ -8787,7 +9058,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f96125a77764ab4458c95058dff48d5e, type: 3}
-  m_Color: {r: 0.3584906, g: 0.08257093, b: 0, a: 1}
+  m_Color: {r: 0.059996627, g: 0.35686275, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8805,12 +9076,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597167618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 115.2, y: 51.87, z: 0}
-  m_LocalScale: {x: 0.5428314, y: 0.5545498, z: 1}
+  m_LocalPosition: {x: 115.46, y: 52.073, z: 0}
+  m_LocalScale: {x: 1.0634537, y: 0.9608911, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &597167621
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597167618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: 0.5, y: 0.5}
+      - {x: 0.5, y: -0.5}
 --- !u!1 &603556260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8837,8 +9137,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603556260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8621, y: 0.12697296, z: 0}
-  m_LocalScale: {x: 1.7196048, y: 0.7448865, z: 1}
+  m_LocalPosition: {x: 0.8621, y: -0.029, z: 0}
+  m_LocalScale: {x: 1.7196048, y: 1.0574621, z: 1}
   m_Children: []
   m_Father: {fileID: 1064197705}
   m_RootOrder: 0
@@ -9126,9 +9426,10 @@ GameObject:
   m_Component:
   - component: {fileID: 619511521}
   - component: {fileID: 619511522}
+  - component: {fileID: 619511523}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9197,6 +9498,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &619511523
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619511520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &630297345
 GameObject:
   m_ObjectHideFlags: 0
@@ -9949,8 +10279,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698749134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.03, y: 10.363594, z: 0}
-  m_LocalScale: {x: 24.050089, y: 1, z: 1}
+  m_LocalPosition: {x: 88.03, y: 10.095, z: 0}
+  m_LocalScale: {x: 24.050089, y: 0.46374798, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 91
@@ -10024,9 +10354,10 @@ GameObject:
   m_Component:
   - component: {fileID: 713700269}
   - component: {fileID: 713700268}
+  - component: {fileID: 713700270}
   m_Layer: 0
   m_Name: Vine _2 (4)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10100,6 +10431,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &713700270
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713700267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &714638717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10179,9 +10539,10 @@ GameObject:
   m_Component:
   - component: {fileID: 715030455}
   - component: {fileID: 715030456}
+  - component: {fileID: 715030457}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10250,6 +10611,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &715030457
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715030454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &741141500
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,9 +10650,10 @@ GameObject:
   m_Component:
   - component: {fileID: 741141501}
   - component: {fileID: 741141502}
+  - component: {fileID: 741141503}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10331,6 +10722,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &741141503
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741141500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &753453704
 GameObject:
   m_ObjectHideFlags: 0
@@ -10830,7 +11250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776248265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.67, y: -2.01, z: 0}
+  m_LocalPosition: {x: 78.68, y: -0.34, z: 0}
   m_LocalScale: {x: 2.0423508, y: 0.3654573, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10875,7 +11295,7 @@ PrefabInstance:
     - target: {fileID: 8867914027758933048, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: wooshHeight
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933053, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
@@ -11716,7 +12136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822922538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.758735, y: -15.309572, z: 0}
+  m_LocalPosition: {x: -9.74, y: -12.5, z: 0}
   m_LocalScale: {x: 1, y: 1.2410336, z: 1}
   m_Children: []
   m_Father: {fileID: 115267729}
@@ -11872,9 +12292,10 @@ GameObject:
   m_Component:
   - component: {fileID: 850498600}
   - component: {fileID: 850498601}
+  - component: {fileID: 850498602}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11943,6 +12364,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &850498602
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850498599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &855093437
 GameObject:
   m_ObjectHideFlags: 0
@@ -12099,7 +12549,7 @@ PrefabInstance:
     - target: {fileID: 7137152134624424039, guid: 9f325625df5960843b6ed47c032d5542,
         type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7137152134624424039, guid: 9f325625df5960843b6ed47c032d5542,
         type: 3}
@@ -12114,12 +12564,12 @@ PrefabInstance:
     - target: {fileID: 7137152134624424039, guid: 9f325625df5960843b6ed47c032d5542,
         type: 3}
       propertyPath: moveDirection.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7137152134624424039, guid: 9f325625df5960843b6ed47c032d5542,
         type: 3}
       propertyPath: moveDirection.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f325625df5960843b6ed47c032d5542, type: 3}
@@ -12230,7 +12680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874339285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.7261, y: -6.52, z: 0}
+  m_LocalPosition: {x: -16.773, y: -5.06, z: 0}
   m_LocalScale: {x: 1.3822774, y: 1.332016, z: 1}
   m_Children: []
   m_Father: {fileID: 115267729}
@@ -13616,8 +14066,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943746315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.99, y: 32.9, z: 0}
-  m_LocalScale: {x: 14.8678, y: -6.710802, z: 1}
+  m_LocalPosition: {x: 25.99, y: 33.973, z: 0}
+  m_LocalScale: {x: 14.8678, y: -4.5657954, z: 1}
   m_Children:
   - {fileID: 64038483}
   - {fileID: 808949267}
@@ -13773,9 +14223,10 @@ GameObject:
   m_Component:
   - component: {fileID: 956093457}
   - component: {fileID: 956093458}
+  - component: {fileID: 956093459}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13844,6 +14295,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &956093459
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956093456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &961652243
 GameObject:
   m_ObjectHideFlags: 0
@@ -14329,9 +14809,10 @@ GameObject:
   m_Component:
   - component: {fileID: 994820036}
   - component: {fileID: 994820037}
+  - component: {fileID: 994820038}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14400,6 +14881,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &994820038
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994820035}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1001451924
 GameObject:
   m_ObjectHideFlags: 0
@@ -15437,8 +15947,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087738812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.587, y: -0.855, z: 0}
-  m_LocalScale: {x: 7.5577645, y: 0.9232539, z: 1}
+  m_LocalPosition: {x: 124.587, y: -0.603, z: 0}
+  m_LocalScale: {x: 7.5577645, y: 0.41882423, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 83
@@ -15582,13 +16092,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.7349508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 121.318855
       objectReference: {fileID: 0}
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9076731
+      value: -2.674
       objectReference: {fileID: 0}
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
@@ -15869,7 +16384,7 @@ PrefabInstance:
     - target: {fileID: 8867914027758933048, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: wooshHeight
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933053, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
@@ -15889,12 +16404,12 @@ PrefabInstance:
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.12
+      value: -39.22
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
@@ -17051,9 +17566,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1147341914}
   - component: {fileID: 1147341915}
+  - component: {fileID: 1147341916}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17122,6 +17638,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1147341916
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147341913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1162276298
 GameObject:
   m_ObjectHideFlags: 0
@@ -18046,7 +18591,7 @@ PrefabInstance:
     - target: {fileID: 8867914027758933048, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: wooshHeight
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933053, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
@@ -18354,8 +18899,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228020549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.1, y: 48.958, z: 0}
-  m_LocalScale: {x: -13.527306, y: -8.297328, z: 1}
+  m_LocalPosition: {x: 95.1, y: 50.06, z: 0}
+  m_LocalScale: {x: -13.527306, y: -6.0927377, z: 1}
   m_Children:
   - {fileID: 1398607450}
   - {fileID: 797925936}
@@ -18622,9 +19167,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1256343090}
   - component: {fileID: 1256343091}
+  - component: {fileID: 1256343092}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18693,6 +19239,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1256343092
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256343089}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1270594351
 GameObject:
   m_ObjectHideFlags: 0
@@ -18843,9 +19418,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1275956059}
   - component: {fileID: 1275956060}
+  - component: {fileID: 1275956061}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18914,6 +19490,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1275956061
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275956058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1284699054
 GameObject:
   m_ObjectHideFlags: 0
@@ -19548,9 +20153,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1306510994}
   - component: {fileID: 1306510995}
+  - component: {fileID: 1306510996}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19619,6 +20225,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1306510996
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306510993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &1315441585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19699,9 +20334,10 @@ GameObject:
   - component: {fileID: 1316292017}
   - component: {fileID: 1316292018}
   - component: {fileID: 1316292019}
+  - component: {fileID: 1316292020}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19771,6 +20407,35 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &1316292019
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316292016}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
+--- !u!60 &1316292020
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20994,9 +21659,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1418968004}
   - component: {fileID: 1418968005}
+  - component: {fileID: 1418968006}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21065,6 +21731,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1418968006
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418968003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &1426215752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21174,9 +21869,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1444105795}
   - component: {fileID: 1444105794}
+  - component: {fileID: 1444105796}
   m_Layer: 0
   m_Name: Vine _2 (5)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21250,6 +21946,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1444105796
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444105793}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1475412852
 GameObject:
   m_ObjectHideFlags: 0
@@ -21326,8 +22051,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475412852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.46, y: 30.713, z: 0}
-  m_LocalScale: {x: 0.88626343, y: 3.3395095, z: 1}
+  m_LocalPosition: {x: -86.46, y: 31.144, z: 0}
+  m_LocalScale: {x: 0.88626343, y: 4.2008452, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 130
@@ -21371,6 +22096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481742310}
   - component: {fileID: 1481742309}
+  - component: {fileID: 1481742311}
   m_Layer: 0
   m_Name: Vine _2
   m_TagString: Vine
@@ -21447,6 +22173,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1481742311
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481742308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1495220346
 GameObject:
   m_ObjectHideFlags: 0
@@ -21668,7 +22423,7 @@ PrefabInstance:
     - target: {fileID: 5142802930239530190, guid: 64713220e6120024dbb1cea594ac3bbd,
         type: 3}
       propertyPath: moveDuration
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5142802930239530190, guid: 64713220e6120024dbb1cea594ac3bbd,
         type: 3}
@@ -21677,8 +22432,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5142802930239530190, guid: 64713220e6120024dbb1cea594ac3bbd,
         type: 3}
+      propertyPath: activationDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142802930239530190, guid: 64713220e6120024dbb1cea594ac3bbd,
+        type: 3}
       propertyPath: moveDirection.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142802930239530190, guid: 64713220e6120024dbb1cea594ac3bbd,
+        type: 3}
+      propertyPath: deactivationDelay
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64713220e6120024dbb1cea594ac3bbd, type: 3}
@@ -22353,9 +23118,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1567705647}
   - component: {fileID: 1567705648}
+  - component: {fileID: 1567705649}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22424,6 +23190,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1567705649
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567705646}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1581542114
 GameObject:
   m_ObjectHideFlags: 0
@@ -22878,9 +23673,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1606146318}
   - component: {fileID: 1606146317}
+  - component: {fileID: 1606146319}
   m_Layer: 0
   m_Name: Vine _2 (6)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22954,6 +23750,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1606146319
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606146316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &1616874278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22974,12 +23799,12 @@ PrefabInstance:
     - target: {fileID: 6965939670188489080, guid: dcc847982b0e9694f8f3928d36fcef13,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -111.77309
+      value: -112.49
       objectReference: {fileID: 0}
     - target: {fileID: 6965939670188489080, guid: dcc847982b0e9694f8f3928d36fcef13,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6409798
+      value: 3.39
       objectReference: {fileID: 0}
     - target: {fileID: 6965939670188489080, guid: dcc847982b0e9694f8f3928d36fcef13,
         type: 3}
@@ -23320,8 +24145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632983915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.23, y: 0.466, z: 0}
-  m_LocalScale: {x: 13.886867, y: 1.4490694, z: 1}
+  m_LocalPosition: {x: 21.23, y: 0.483, z: 0}
+  m_LocalScale: {x: 13.886867, y: 1.4142537, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 71
@@ -23556,6 +24381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1636444232}
   - component: {fileID: 1636444233}
+  - component: {fileID: 1636444234}
   m_Layer: 10
   m_Name: Square (15)
   m_TagString: Floor
@@ -23627,6 +24453,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1636444234
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636444231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: 0.5, y: 0.5}
+      - {x: 0.5, y: -0.5}
 --- !u!1 &1637905134
 GameObject:
   m_ObjectHideFlags: 0
@@ -23637,9 +24492,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1637905135}
   - component: {fileID: 1637905136}
+  - component: {fileID: 1637905137}
   m_Layer: 0
   m_Name: Diamond (8)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23708,6 +24564,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1637905137
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637905134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1645898597
 GameObject:
   m_ObjectHideFlags: 0
@@ -24005,7 +24890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658651777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.079182, y: -12.57405, z: 0}
+  m_LocalPosition: {x: -11.01, y: -9.9, z: 0}
   m_LocalScale: {x: 1, y: 1.2410336, z: 1}
   m_Children: []
   m_Father: {fileID: 115267729}
@@ -24980,9 +25865,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1728242166}
   - component: {fileID: 1728242165}
+  - component: {fileID: 1728242167}
   m_Layer: 0
   m_Name: Vine _2 (3)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25056,6 +25942,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 119
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1728242167
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728242164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1734089847
 GameObject:
   m_ObjectHideFlags: 0
@@ -26490,6 +27405,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8867914027758933048, guid: f76659cbb19955246ae6bcfa5c9279aa,
+        type: 3}
+      propertyPath: wooshHeight
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933053, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: m_Name
@@ -26518,12 +27438,12 @@ PrefabInstance:
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 79.74
+      value: 81.62
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.52
+      value: -4.45
       objectReference: {fileID: 0}
     - target: {fileID: 8867914027758933055, guid: f76659cbb19955246ae6bcfa5c9279aa,
         type: 3}
@@ -26950,8 +27870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826506126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.577, y: 15.686, z: 0}
-  m_LocalScale: {x: 84.4341, y: 0.70736724, z: 1}
+  m_LocalPosition: {x: 44.122, y: 15.656, z: 0}
+  m_LocalScale: {x: 83.3432, y: 0.7669528, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 87
@@ -27527,9 +28447,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1857096609}
   - component: {fileID: 1857096610}
+  - component: {fileID: 1857096611}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27598,6 +28519,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1857096611
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857096608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1863887941
 GameObject:
   m_ObjectHideFlags: 0
@@ -27719,9 +28669,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1876025702}
   - component: {fileID: 1876025703}
+  - component: {fileID: 1876025704}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27790,6 +28741,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1876025704
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876025701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1891926428
 GameObject:
   m_ObjectHideFlags: 0
@@ -28197,8 +29177,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903004827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.65, y: 12.59, z: 0}
-  m_LocalScale: {x: 17.083527, y: 7.0093613, z: 1}
+  m_LocalPosition: {x: 92.65, y: 12.143, z: 0}
+  m_LocalScale: {x: 17.083527, y: 7.903114, z: 1}
   m_Children:
   - {fileID: 481503340}
   - {fileID: 2018799109}
@@ -28354,9 +29334,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1906224476}
   - component: {fileID: 1906224477}
+  - component: {fileID: 1906224478}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28425,6 +29406,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1906224478
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906224475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1914861279
 GameObject:
   m_ObjectHideFlags: 0
@@ -29568,9 +30578,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1991261460}
   - component: {fileID: 1991261459}
+  - component: {fileID: 1991261461}
   m_Layer: 0
   m_Name: Vine _2 (1)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29644,6 +30655,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 117
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1991261461
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991261458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &1992523377
 GameObject:
   m_ObjectHideFlags: 0
@@ -29967,9 +31007,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2023497138}
   - component: {fileID: 2023497139}
+  - component: {fileID: 2023497140}
   m_Layer: 0
   m_Name: Diamond (10)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30038,6 +31079,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2023497140
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023497137}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &2024255848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30265,9 +31335,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2033368685}
   - component: {fileID: 2033368686}
+  - component: {fileID: 2033368687}
   m_Layer: 0
   m_Name: Diamond (9)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30336,6 +31407,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2033368687
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033368684}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1 &2034052511
 GameObject:
   m_ObjectHideFlags: 0
@@ -30857,7 +31957,7 @@ PrefabInstance:
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.82354
+      value: 7.1472974
       objectReference: {fileID: 0}
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
@@ -30867,7 +31967,7 @@ PrefabInstance:
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.387
+      value: 43.549
       objectReference: {fileID: 0}
     - target: {fileID: 8698614517268573421, guid: bf3556d1cf7711549a87fb413e60ffe5,
         type: 3}
@@ -31115,7 +32215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081740746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.445, y: -0.89, z: 0}
+  m_LocalPosition: {x: 74.445, y: 1.3000001, z: 0}
   m_LocalScale: {x: 4.164459, y: 0.3654575, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31446,9 +32546,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2110309743}
   - component: {fileID: 2110309744}
+  - component: {fileID: 2110309745}
   m_Layer: 0
   m_Name: Diamond (7)
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31517,6 +32618,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2110309745
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110309742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!1001 &2116310371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32042,7 +33172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143354600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.412206, y: -9.721625, z: 0}
+  m_LocalPosition: {x: -12.38, y: -6.3, z: 0}
   m_LocalScale: {x: 1, y: 1.332016, z: 1}
   m_Children: []
   m_Father: {fileID: 115267729}
@@ -32153,8 +33283,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144977179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.164, y: 42.436, z: 0}
-  m_LocalScale: {x: 2.6882324, y: 5.029811, z: 1}
+  m_LocalPosition: {x: 73.164, y: 43.475, z: 0}
+  m_LocalScale: {x: 2.6882324, y: 7.1079316, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 104
