@@ -17,7 +17,7 @@ public class Lava : MonoBehaviour
     private IEnumerator Die()
     {
         Time.timeScale = 0;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSecondsRealtime(3);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
