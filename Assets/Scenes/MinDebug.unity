@@ -6067,6 +6067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfc0b60fa6453c4a920cec1e824a37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badSound: {fileID: 0}
 --- !u!212 &372267490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15949,6 +15950,11 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2116651970166112778, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6379711593003198768, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
         type: 3}
       propertyPath: m_Name
@@ -16011,9 +16017,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379711593003198770, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
         type: 3}
+      propertyPath: _bodyState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379711593003198770, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
       propertyPath: GroundDetector
       value: 
       objectReference: {fileID: 1025991136}
+    - target: {fileID: 8055147596224321790, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6618d6cfeb83f5f459ef1772beac5d4f, type: 3}
 --- !u!4 &1025991135 stripped
@@ -24727,6 +24743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfc0b60fa6453c4a920cec1e824a37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badSound: {fileID: 0}
 --- !u!212 &1633680048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30842,6 +30859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfc0b60fa6453c4a920cec1e824a37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badSound: {fileID: 0}
 --- !u!212 &2078903695
 SpriteRenderer:
   m_ObjectHideFlags: 0
