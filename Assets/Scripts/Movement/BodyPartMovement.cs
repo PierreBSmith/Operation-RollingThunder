@@ -8,12 +8,14 @@ public class BodyPartMovement : MonoBehaviour
     public AudioSource footsteps;
     [Header("General Variables")]
     public BodyPart _bodyPart;
+    public AudioSource headroll;
     [SerializeField] private float speed;
     private Rigidbody2D _r2D;
     [HideInInspector] public Animator _animator;
     private PlayerMovement _playerMovement;
     public Transform GroundDetector;
     public LayerMask whatIsGround;
+    [HideInInspector] public float input;
 
     [Header("Torso")]
     [SerializeField] private float jumpMultiplier;
@@ -62,7 +64,7 @@ public class BodyPartMovement : MonoBehaviour
 
     public void HeadMovement()
     {
-        float input = Input.GetAxis("Horizontal");
+        input = Input.GetAxis("Horizontal");
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
@@ -73,12 +75,14 @@ public class BodyPartMovement : MonoBehaviour
         }
         _r2D.constraints = RigidbodyConstraints2D.None;
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
+        if(!headroll.isPlaying && isGrounded() && _r2D.velocity != new Vector2(0,0))
+            headroll.Play();
     }
 
     public void TorsoMovement()
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        float input = Input.GetAxis("Horizontal");
+        input = Input.GetAxis("Horizontal");
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
@@ -98,7 +102,7 @@ public class BodyPartMovement : MonoBehaviour
     public void ArmMovement()
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        float input = Input.GetAxis("Horizontal");
+        input = Input.GetAxis("Horizontal");
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
@@ -111,19 +115,21 @@ public class BodyPartMovement : MonoBehaviour
             footsteps.Play();
         }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
-        Climb(input);
+        //Climb(input);
         PickUp();
         PutDown();
     }
 
-    private void Climb(float xMovement)
+    public void Climb(float xMovement)
     {
+        Debug.Log("Climb being called");
         if (Input.GetKey(KeyCode.Space) && canClimb)
         {
             climbing = true;
+            Debug.Log(xMovement);
             _r2D.velocity = new Vector2(xMovement * speed, climbSpeed);
         }
-        else if ((!canClimb || Input.GetKeyUp(KeyCode.Space)) && climbing)
+        else if (!canClimb && climbing)
         { 
             climbing = false;
         }
@@ -164,7 +170,7 @@ public class BodyPartMovement : MonoBehaviour
     public void LegMovement()
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        float input = Input.GetAxis("Horizontal");
+        input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
         if (input <= 0)
         {
@@ -181,7 +187,7 @@ public class BodyPartMovement : MonoBehaviour
             _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
             jumping = true;
         }
-        if (input != 0 && !jumping)
+        if (input != 0)
         {
             if(!footsteps.isPlaying && isGrounded())
                 footsteps.Play();
@@ -193,7 +199,7 @@ public class BodyPartMovement : MonoBehaviour
     public void ArmLegMovement()
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        float input = Input.GetAxis("Horizontal");
+        input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
         if (input <= 0)
         {
@@ -212,12 +218,12 @@ public class BodyPartMovement : MonoBehaviour
             _r2D.velocity = new Vector2(_r2D.velocity.x, jumpForce);
             jumping = true;
         }
-        if (input != 0 && !jumping)
+        if (input != 0)
         {
             if(!footsteps.isPlaying && isGrounded())
                 footsteps.Play();
             _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
-            Climb(input);
+            //Climb(input);
             PickUp();
             PutDown();
             _animator.SetBool("Walking", true);
