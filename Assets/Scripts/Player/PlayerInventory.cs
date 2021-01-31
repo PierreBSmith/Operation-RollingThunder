@@ -60,12 +60,14 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case BodyPart.PartType.Arms:
                 bodyCollection.arms = newestPart;
+                gameObject.transform.rotation = Quaternion.identity;
                 arm.SetActive(true);
                 break;
             case BodyPart.PartType.Legs:
                 bodyCollection.legs = newestPart;
                 if(OnlyHead())
                 {
+                    gameObject.transform.rotation = Quaternion.identity;
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 leg.SetActive(true);
@@ -74,6 +76,7 @@ public class PlayerInventory : MonoBehaviour
                 bodyCollection.torso = newestPart;
                 if(OnlyHead())
                 {
+                    gameObject.transform.rotation = Quaternion.identity;
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 torso.SetActive(true);
