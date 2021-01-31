@@ -87,11 +87,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        playerInventory = GetComponent<PlayerInventory>();
+    }
+
     void Start()
     {
         //_bodyState = BodyState.HEAD;
         mainBodyPart = gameObject.transform.GetChild(0).gameObject;
         _r2D = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if(_bodyState == BodyState.ARM_HEAD || _bodyState == BodyState.ARM_HEAD_TORSO || 
+        _bodyState == BodyState.ARM_LEG || _bodyState == BodyState.ARM_LEG_HEAD || _bodyState == BodyState.ALL_PARTS)
+        {
+            mainBodyPart.GetComponent<BodyPartMovement>().Climb(mainBodyPart.GetComponent<BodyPartMovement>().input);
+        }
     }
 
     void FixedUpdate()
