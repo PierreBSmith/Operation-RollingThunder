@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PressureButton : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PressureButton : MonoBehaviour
     [SerializeField] private Toggleable[] toggleables;
     [SerializeField] private float gracePeriod;
 
+    private bool _pressedByButton;
+    private bool _pressedByPlayer;
     private float _grace;
     private void Start()
     {
@@ -20,16 +23,21 @@ public class PressureButton : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerInventory playerInventory;
-        if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
+        if (!_pressedByButton)
         {
-            if (playerInventory.weight >= weightRequirement && _grace <= 0)
+            PlayerInventory playerInventory;
+            if (other.gameObject.CompareTag("Player") &&
+                (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
             {
-                _grace = gracePeriod;
-                foreach (Toggleable toggle in toggleables)
+                if (playerInventory.weight >= weightRequirement && _grace <= 0)
                 {
-                    if (toggle != null)
-                        StartCoroutine(toggle.Activate());
+                    _grace = gracePeriod;
+                    _pressedByPlayer = true;
+                    foreach (Toggleable toggle in toggleables)
+                    {
+                        if (toggle != null)
+                            StartCoroutine(toggle.Activate());
+                    }
                 }
             }
         }
@@ -41,6 +49,38 @@ public class PressureButton : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
         {
             if (playerInventory.weight >= weightRequirement && _grace <= 0)
+            {
+                foreach (Toggleable toggle in toggleables)
+                {
+                    if (toggle != null)
+                        StartCoroutine(toggle.Deactivate());
+                }
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Box"))
+        {
+            _pressedByButton = true;
+            if (!_pressedByPlayer)
+            {
+                foreach (Toggleable toggle in toggleables)
+                {
+                    if (toggle != null)
+                        StartCoroutine(toggle.Activate());
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        _pressedByButton = false;
+        if (other.gameObject.CompareTag("Box"))
+        {
+            if(!_pressedByPlayer)
             {
                 foreach (Toggleable toggle in toggleables)
                 {

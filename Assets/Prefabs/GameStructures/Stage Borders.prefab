@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2658141011161499511}
   - component: {fileID: 2658141011161499509}
   - component: {fileID: 2658141011161499510}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right Side of Stage
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2658141011329411341}
   - component: {fileID: 2658141011329411339}
   - component: {fileID: 2658141011329411340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Side of Stage
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2658141011419755424}
   - component: {fileID: 2658141011419755425}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stage Borders
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 2658141011725019376}
   - component: {fileID: 2658141011725019374}
   - component: {fileID: 2658141011725019375}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor of Stage
   m_TagString: Floor
   m_Icon: {fileID: 0}
