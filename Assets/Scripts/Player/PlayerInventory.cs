@@ -64,10 +64,18 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case BodyPart.PartType.Legs:
                 bodyCollection.legs = newestPart;
+                if(OnlyHead())
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
+                }
                 leg.SetActive(true);
                 break;
             case BodyPart.PartType.Torso:
                 bodyCollection.torso = newestPart;
+                if(OnlyHead())
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
+                }
                 torso.SetActive(true);
                 break;
         }
@@ -83,5 +91,19 @@ public class PlayerInventory : MonoBehaviour
         {
             AddPart();
         }
+    }
+
+    private bool OnlyHead()
+    {
+        bool hasOnlyHead = true;
+        foreach (Transform child in transform)
+        {
+            if(child.gameObject.name != "Head" && child.gameObject.activeSelf)
+            {
+                hasOnlyHead = false;
+                break;
+            }
+        }
+        return hasOnlyHead;
     }
 }
