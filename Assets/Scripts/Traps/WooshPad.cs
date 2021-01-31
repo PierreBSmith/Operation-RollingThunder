@@ -12,12 +12,15 @@ public class WooshPad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Detected player");
             PlayerInventory playerInventory = other.gameObject.GetComponent<PlayerInventory>();
             float jumpHeight;
-            if (playerInventory.weight == maxWeight)
+            if (playerInventory.weight >= maxWeight)
                 jumpHeight = 0;
             else
-                jumpHeight = Mathf.Max(0, wooshHeight / (maxWeight - playerInventory.weight));
+                jumpHeight = Mathf.Max(0, wooshHeight / (playerInventory.weight / 2f));
+            Debug.Log("Player Weight: " + playerInventory.weight);
+            Debug.Log("Player should launch: " + jumpHeight);
             other.rigidbody.AddForce(Vector2.up * jumpHeight);
         }
     }
