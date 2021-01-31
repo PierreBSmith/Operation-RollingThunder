@@ -1,5 +1,105 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &139518010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139518011}
+  m_Layer: 0
+  m_Name: GroundDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139518011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139518010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: -1.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6379711593003198769}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &942359888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942359889}
+  - component: {fileID: 942359890}
+  - component: {fileID: 942359891}
+  m_Layer: 9
+  m_Name: BoxDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &942359889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942359888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3050520980609560414}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &942359890
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942359888}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.99}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.62, y: 3.09}
+  m_EdgeRadius: 0
+--- !u!114 &942359891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942359888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3638f01ec02090445ba1bf4caae65dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6379711593003198768
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +134,7 @@ Transform:
   - {fileID: 8055147596224321789}
   - {fileID: 2116651970166112779}
   - {fileID: 2877055276060818043}
+  - {fileID: 139518011}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,7 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9d16e5b8f00ab4c896f87fffe4f40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bodyState: 0
+  facingRight: 0
+  throwStrengthX: 10
+  throwStrengthY: 15
+  _bodyState: 7
 --- !u!114 &6379711593003198772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +210,15 @@ MonoBehaviour:
   _bodyPart: {fileID: 11400000, guid: e2f0633299c8aca40b26ffc1591ca37a, type: 2}
   speed: 5
   _animator: {fileID: 0}
+  GroundDetector: {fileID: 139518011}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
   jumpMultiplier: 2.5
   climbSpeed: 0
+  canClimb: 0
+  carrying: 0
+  canCarryObject: {fileID: 0}
   jumpForce: 0
 --- !u!1001 &381550859007995035
 PrefabInstance:
@@ -117,8 +228,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 6379711593003198769}
     m_Modifications:
     - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
+      propertyPath: jumpForce
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
       propertyPath: wallCheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
+      propertyPath: GroundDetector
+      value: 
+      objectReference: {fileID: 139518011}
+    - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3395198273935459269, guid: 7cf5171ec55713f4db54bc3bd7f07874,
         type: 3}
@@ -201,6 +324,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6379711593003198769}
     m_Modifications:
+    - target: {fileID: 1361544813, guid: b472d7c492e7aef41a6ce956a9d4a7e6, type: 3}
+      propertyPath: GroundDetector
+      value: 
+      objectReference: {fileID: 139518011}
+    - target: {fileID: 1361544813, guid: b472d7c492e7aef41a6ce956a9d4a7e6, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 9179483257488498158, guid: b472d7c492e7aef41a6ce956a9d4a7e6,
         type: 3}
       propertyPath: m_Name
@@ -209,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 9179483257488498158, guid: b472d7c492e7aef41a6ce956a9d4a7e6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9179483257488498159, guid: b472d7c492e7aef41a6ce956a9d4a7e6,
         type: 3}
@@ -287,6 +418,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6379711593003198769}
     m_Modifications:
+    - target: {fileID: 820993304, guid: e495a0ce45e3372409609fe730fee2c2, type: 3}
+      propertyPath: GroundDetector
+      value: 
+      objectReference: {fileID: 139518011}
+    - target: {fileID: 820993304, guid: e495a0ce45e3372409609fe730fee2c2, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 5032370317965597118, guid: e495a0ce45e3372409609fe730fee2c2,
         type: 3}
       propertyPath: m_Name
@@ -295,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 5032370317965597118, guid: e495a0ce45e3372409609fe730fee2c2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5032370317965597119, guid: e495a0ce45e3372409609fe730fee2c2,
         type: 3}
@@ -436,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 3981441466905994138, guid: cd680e2d5397f1f408e911b26c878275,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3981441466905994135, guid: cd680e2d5397f1f408e911b26c878275, type: 3}

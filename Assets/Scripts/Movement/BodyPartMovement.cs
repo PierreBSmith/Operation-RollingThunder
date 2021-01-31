@@ -7,19 +7,21 @@ public class BodyPartMovement : MonoBehaviour
     [Header("General Variables")]
     public BodyPart _bodyPart;
     [SerializeField] private float speed;
-    private bool grounded;
     private Rigidbody2D _r2D;
     [HideInInspector] public Animator _animator;
     private PlayerMovement _playerMovement;
+    public Transform GroundDetector;
+    public LayerMask whatIsGround;
 
     [Header("Torso")]
     [SerializeField] private float jumpMultiplier;
 
     [Header("Arm")]
     [SerializeField] private float climbSpeed;
+    [HideInInspector] public bool canClimb;
     private bool climbing;
     [HideInInspector] public bool carrying;
-    private GameObject canCarryObject;
+    [HideInInspector] public GameObject canCarryObject;
     private GameObject carryingObject;
 
     [Header("Leg")]
@@ -36,38 +38,21 @@ public class BodyPartMovement : MonoBehaviour
         _playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
     }
 
-    void OnCollisionStay2D(Collision2D collider)
+    private bool isGrounded()
     {
-        if(collider.gameObject.CompareTag("Floor"))
+        bool grounded;
+        if(Physics2D.OverlapCircle(GroundDetector.position, 0.1f, whatIsGround))
         {
             grounded = true;
             jumping = false;
         }
-    }
-
-    void OnCollisionExit2D(Collision2D collider)
-    {
-        grounded = false;
-    }
-
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        if(collider.gameObject.CompareTag("Box"))
+        else
         {
-            Debug.Log("Found object");
-            canCarryObject = collider.gameObject;
+            grounded = false;
         }
+        return grounded;
     }
-
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        if(collider.gameObject.CompareTag("Box"))
-        {
-            Debug.Log("Leaving Object");
-            canCarryObject = null;
-        }
-    }
-
+    
     public void SetLegAnimator(Animator animator)
     {
         _animator = animator;
@@ -100,10 +85,9 @@ public class BodyPartMovement : MonoBehaviour
         {
             _playerMovement.facingRight = true;
         }
-        if(input != 0 && grounded)
+        if(input != 0 && isGrounded())
         {
             _r2D.velocity = new Vector2(speed * input, jumpMultiplier);
-            grounded = false;
         }
     }
 
@@ -120,19 +104,19 @@ public class BodyPartMovement : MonoBehaviour
             _playerMovement.facingRight = true;
         }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
-        //Climb();
+        Climb();
         PickUp();
         PutDown();
     }
 
     private void Climb()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && canClimb)
         {
             climbing = true;
             _r2D.velocity = Vector2.up * climbSpeed;
         }
-        else if (Input.GetKeyUp(KeyCode.Space) && climbing)
+        else if (!canClimb && climbing)
         {
             climbing = false;
         }
@@ -183,9 +167,9 @@ public class BodyPartMovement : MonoBehaviour
         {
             _playerMovement.facingRight = true;
         }
-        if(Input.GetKeyDown(KeyCode.Space) && grounded)
+        if(Input.GetKey(KeyCode.Space) && isGrounded())
         {
-            _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
+            _r2D.AddForce(new Vector2(input * speed, jumpForce));
             jumping = true;
         }
         if (input != 0 && !jumping)
@@ -208,15 +192,17 @@ public class BodyPartMovement : MonoBehaviour
         {
             _playerMovement.facingRight = true;
         }
-        if(Input.GetKeyDown(KeyCode.Space) && grounded)
+        Debug.Log(isGrounded());
+        if(Input.GetKey(KeyCode.Space) && isGrounded() && !canClimb)
         {
-            _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
+            Debug.Log("Jumping");
+            _r2D.AddForce(new Vector2(input * speed, jumpForce));
             jumping = true;
         }
         if (input != 0 && !jumping)
         {
             _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
-            //Climb();
+            Climb();
             PickUp();
             PutDown();
             _animator.SetBool("Walking", true);
