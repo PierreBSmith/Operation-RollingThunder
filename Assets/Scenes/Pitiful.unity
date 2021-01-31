@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8055147596224321790, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6618d6cfeb83f5f459ef1772beac5d4f, type: 3}
 --- !u!1001 &1618891193
@@ -200,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 3787164585362144294, guid: e6d54202bbf300947a0eac454c5f6c1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05000019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3787164585362144294, guid: e6d54202bbf300947a0eac454c5f6c1a,
         type: 3}
@@ -366,7 +371,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1948941329
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f96125a77764ab4458c95058dff48d5e, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
