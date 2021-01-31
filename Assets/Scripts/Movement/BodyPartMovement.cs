@@ -8,6 +8,7 @@ public class BodyPartMovement : MonoBehaviour
     public AudioSource footsteps;
     [Header("General Variables")]
     public BodyPart _bodyPart;
+    public AudioSource headroll;
     [SerializeField] private float speed;
     private Rigidbody2D _r2D;
     [HideInInspector] public Animator _animator;
@@ -73,6 +74,8 @@ public class BodyPartMovement : MonoBehaviour
         }
         _r2D.constraints = RigidbodyConstraints2D.None;
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
+        if(!headroll.isPlaying && isGrounded() && _r2D.velocity != new Vector2(0,0))
+            headroll.Play();
     }
 
     public void TorsoMovement()
