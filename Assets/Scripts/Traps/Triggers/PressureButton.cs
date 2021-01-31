@@ -9,6 +9,7 @@ public class PressureButton : MonoBehaviour
     [SerializeField] private Toggleable[] toggleables;
     [SerializeField] private float gracePeriod;
 
+    private float _grace;
     private void Start()
     {
         if (toggleables.Length == 0)
@@ -22,8 +23,9 @@ public class PressureButton : MonoBehaviour
         PlayerInventory playerInventory;
         if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
         {
-            if (playerInventory.weight >= weightRequirement)
+            if (playerInventory.weight >= weightRequirement && _grace <= 0)
             {
+                _grace = gracePeriod;
                 foreach (Toggleable toggle in toggleables)
                 {
                     if (toggle != null)
@@ -38,7 +40,7 @@ public class PressureButton : MonoBehaviour
         PlayerInventory playerInventory;
         if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
         {
-            if (playerInventory.weight >= weightRequirement)
+            if (playerInventory.weight >= weightRequirement && _grace <= 0)
             {
                 foreach (Toggleable toggle in toggleables)
                 {
@@ -47,5 +49,10 @@ public class PressureButton : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Update()
+    {
+        _grace -= Time.deltaTime;
     }
 }
