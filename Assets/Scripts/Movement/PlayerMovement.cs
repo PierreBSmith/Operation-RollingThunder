@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private const float BELOW_LEGS = -1.5f;
     private const float BELOW_TORSO = -0.8f;
     private const float BELOW_HEAD = 0.5f;
-    private Transform GroundDetector;
+    public Transform GroundDetector;
 
     [HideInInspector] public bool facingRight;
 
@@ -43,26 +43,22 @@ public class PlayerMovement : MonoBehaviour
                     {
                         //this also takes leg movment, but also head throwing, just an easy check
                         _bodyState = BodyState.ALL_PARTS;
-                        GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                     }
                     else
                     {
                         //if head, torso, leg, then take leg movement
                         _bodyState = BodyState.LEG;
-                        GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                     }
                 }
                 else if(playerInventory.bodyCollection.arms)
                 {
                     //has head, torso, arm, then take torso movement, but throwing enabled
                     _bodyState = BodyState.ARM_HEAD_TORSO;
-                    GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 }
                 else
                 {
                     //only head and torso, take torso movement
                     _bodyState = BodyState.TORSO;
-                    GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 }
             }
             else if (playerInventory.bodyCollection.legs)
@@ -71,26 +67,22 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //head leg arm, take leg and arm movement and throwing
                     _bodyState = BodyState.ARM_LEG_HEAD;
-                    GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 }
                 else
                 {
                     //only head and legs
                     _bodyState = BodyState.LEG;
-                    GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 }
             }
             else if(playerInventory.bodyCollection.arms)
             {
                 //only head and arm throwing and arm movement
                 _bodyState = BodyState.ARM_HEAD;
-                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
             }
             else
             {
                 //lmao you only head
                 _bodyState = BodyState.HEAD;
-                GroundDetector.transform.position = new Vector2(0, BELOW_HEAD);
             }
         }
     }
@@ -107,9 +99,11 @@ public class PlayerMovement : MonoBehaviour
         switch(_bodyState)
         {
             case BodyState.HEAD:
+                GroundDetector.transform.position = new Vector2(0, BELOW_HEAD);
                 mainBodyPart.GetComponent<BodyPartMovement>().HeadMovement();
                 break;
             case BodyState.TORSO:
+                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 break;
             case BodyState.LEG:
@@ -120,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
+                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ARM_HEAD:
@@ -127,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 ThrowHead();
                 break;
             case BodyState.ARM_HEAD_TORSO:
+                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 ThrowHead();
                 break;
@@ -138,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
+                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 break;
             case BodyState.ALL_PARTS:
@@ -149,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
+                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 ThrowHead();
                 break;
@@ -164,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 //removes all body parts that are not head.
                 foreach(Transform child in transform)
                 {
-                    if(child.gameObject.name != "Head")
+                    if(child.gameObject.name != "Head" && child.gameObject.name != "GroundDetector")
                     {
                         child.gameObject.SetActive(false);
                     }
