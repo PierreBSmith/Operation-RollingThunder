@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
                 mainBodyPart.GetComponent<BodyPartMovement>().HeadMovement();
                 break;
             case BodyState.TORSO:
-                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_TORSO);
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 break;
             case BodyState.LEG:
@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
                 mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ARM_HEAD:
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_TORSO);
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmMovement();
                 ThrowHead();
                 break;
