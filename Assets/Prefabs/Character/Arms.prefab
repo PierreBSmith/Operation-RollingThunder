@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 820993304}
   m_Layer: 9
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,13 +74,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodyPart: {fileID: 11400000, guid: eadf60caecc63654196bf079e434c572, type: 2}
   speed: 5
+  _animator: {fileID: 0}
   jumpMultiplier: 3
   climbSpeed: 3
-  climbTime: 2
-  wallCheck: {fileID: 0}
-  whatIsWall:
-    serializedVersion: 2
-    m_Bits: 256
   jumpForce: 0
 --- !u!1 &5032370318219940400
 GameObject:
