@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3242711221735488882
+--- !u!1 &1615485428459039064
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3242711221735488880}
-  - component: {fileID: 3242711221735488881}
-  - component: {fileID: 8373379431348559197}
-  - component: {fileID: 2005222504178246679}
-  - component: {fileID: 5142802930239530190}
+  - component: {fileID: 1615485428459039066}
+  - component: {fileID: 1615485428459039065}
+  - component: {fileID: 5361775140650258966}
+  - component: {fileID: 6849061361365736817}
   m_Layer: 0
-  m_Name: Locking Platform
-  m_TagString: Floor
+  m_Name: Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3242711221735488880
+--- !u!4 &1615485428459039066
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242711221735488882}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 70.856, y: 10.1, z: 0}
-  m_LocalScale: {x: 2.8715107, y: 0.23720378, z: 1}
+  m_GameObject: {fileID: 1615485428459039064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.2, y: -0.7, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3242711221735488881
+--- !u!212 &1615485428459039065
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242711221735488882}
+  m_GameObject: {fileID: 1615485428459039064}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,11 +69,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1507490695
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f96125a77764ab4458c95058dff48d5e, type: 3}
-  m_Color: {r: 1, g: 0.06132078, b: 0.7689593, a: 1}
+  m_Color: {r: 0.764151, g: 0, b: 0.06878573, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,13 +83,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8373379431348559197
+--- !u!61 &5361775140650258966
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242711221735488882}
+  m_GameObject: {fileID: 1615485428459039064}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -110,42 +109,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &2005222504178246679
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242711221735488882}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &5142802930239530190
+--- !u!114 &6849061361365736817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242711221735488882}
+  m_GameObject: {fileID: 1615485428459039064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540c314a08443f6458fb9fc2edfb9bab, type: 3}
+  m_Script: {fileID: 11500000, guid: deeeeb2df5efad744ac085df1296e3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDelay: 0
-  deactivationDelay: 0
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  moveDuration: 0
-  pauseDuration: 0
+  weightRequirement: 0
+  toggleable: {fileID: 0}

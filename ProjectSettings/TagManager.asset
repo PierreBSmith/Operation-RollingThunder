@@ -48,11 +48,20 @@ TagManager:
   - name: Lava
     uniqueID: 355005079
     locked: 0
+  - name: Buttons
+    uniqueID: 1507490695
+    locked: 0
   - name: Barriers
     uniqueID: 1948941329
     locked: 0
   - name: Traps
     uniqueID: 3087581533
+    locked: 0
+  - name: MapBorders
+    uniqueID: 1969461071
+    locked: 0
+  - name: Pickups
+    uniqueID: 3838206971
     locked: 0
   - name: Player
     uniqueID: 3773698169
