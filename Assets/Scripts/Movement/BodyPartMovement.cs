@@ -107,7 +107,7 @@ public class BodyPartMovement : MonoBehaviour
         {
             _playerMovement.facingRight = true;
         }
-        if(footsteps.isPlaying && isGrounded() && !canClimb){
+        if(!footsteps.isPlaying && isGrounded()){
             footsteps.Play();
         }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
@@ -214,7 +214,7 @@ public class BodyPartMovement : MonoBehaviour
         }
         if (input != 0 && !jumping)
         {
-            if(!footsteps.isPlaying && isGrounded() && !canClimb)
+            if(!footsteps.isPlaying && isGrounded())
                 footsteps.Play();
             _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
             Climb(input);

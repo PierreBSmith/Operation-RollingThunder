@@ -7,7 +7,8 @@ public class WooshPad : MonoBehaviour
 {
     [SerializeField] private float wooshHeight;
     [SerializeField] private int maxWeight;
-    
+    public AudioSource wooshSound;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -17,8 +18,10 @@ public class WooshPad : MonoBehaviour
             float jumpHeight;
             if (playerInventory.weight >= maxWeight)
                 jumpHeight = 0;
-            else
+            else{
                 jumpHeight = Mathf.Max(0, wooshHeight / (playerInventory.weight / 2f));
+                wooshSound.Play();
+            }
             Debug.Log("Player Weight: " + playerInventory.weight);
             Debug.Log("Player should launch: " + jumpHeight);
             other.rigidbody.AddForce(Vector2.up * jumpHeight);
