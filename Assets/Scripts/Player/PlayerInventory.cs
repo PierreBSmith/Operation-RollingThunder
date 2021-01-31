@@ -9,7 +9,7 @@ public class PlayerInventory : MonoBehaviour
 
     [SerializeField] private BodyCollection baseBodyCollection;
     [SerializeField] private int baseWeight;
-
+    public AudioSource partPicked;
     private GameObject _nearestBodyPart;
     [HideInInspector] public BodyCollection bodyCollection;
     [SerializeField] private GameObject head;
@@ -50,7 +50,8 @@ public class PlayerInventory : MonoBehaviour
     }
 
     private void AddPart()
-    {
+    {   
+        partPicked.Play();
         BodyPart newestPart = _nearestBodyPart.GetComponent<PartPickup>().bodyPart;
         switch (newestPart.partType)
         {

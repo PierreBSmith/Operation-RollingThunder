@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        //_bodyState = BodyState.HEAD;
+        _bodyState = BodyState.HEAD;
         mainBodyPart = gameObject.transform.GetChild(0).gameObject;
         _r2D = GetComponent<Rigidbody2D>();
     }

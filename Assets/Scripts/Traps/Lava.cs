@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Lava : MonoBehaviour
 {
+    public AudioSource badSound;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            badSound.Play();
             StartCoroutine(Die());
         }
     }
