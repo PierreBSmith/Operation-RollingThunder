@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BodyPartMovement : MonoBehaviour
 {
+    public AudioSource bounce;
+    //public AudioSource footsteps;
     [Header("General Variables")]
     public BodyPart _bodyPart;
     [SerializeField] private float speed;
@@ -87,6 +89,7 @@ public class BodyPartMovement : MonoBehaviour
         }
         if(input != 0 && isGrounded())
         {
+            bounce.Play();
             _r2D.velocity = new Vector2(speed * input, jumpMultiplier);
         }
     }
@@ -98,10 +101,12 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
+           // footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
+            //footsteps.Play();
         }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
         Climb();
@@ -162,10 +167,12 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
+            //footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
+            //footsteps.Play();
         }
         if(Input.GetKey(KeyCode.Space) && isGrounded())
         {
@@ -187,10 +194,12 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
+           // footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
+            //footsteps.Play();
         }
         Debug.Log(isGrounded());
         if(Input.GetKey(KeyCode.Space) && isGrounded() && !canClimb)
