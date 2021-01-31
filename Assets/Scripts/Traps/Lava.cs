@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lava : MonoBehaviour
 {
@@ -9,7 +10,15 @@ public class Lava : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // Die lmao
+            StartCoroutine(Die());
         }
+    }
+
+    private IEnumerator Die()
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(3);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

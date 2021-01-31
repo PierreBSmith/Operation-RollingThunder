@@ -18,10 +18,10 @@ public class PressureToggle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerManger playerManger;
-        if (other.gameObject.CompareTag("Player") && (playerManger = other.gameObject.GetComponent<PlayerManger>()))
+        PlayerInventory playerInventory;
+        if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
         {
-            if (playerManger.weight >= weightRequirement)
+            if (playerInventory.weight >= weightRequirement)
             {
                 StartCoroutine(toggleable.Activate());
             }
@@ -30,10 +30,10 @@ public class PressureToggle : MonoBehaviour
     
     private void OnCollisionExit2D(Collision2D other)
     {
-        PlayerManger playerManger;
-        if (other.gameObject.CompareTag("Player") && (playerManger = other.gameObject.GetComponent<PlayerManger>()))
+        PlayerInventory playerInventory;
+        if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
         {
-            if (playerManger.weight >= weightRequirement)
+            if (playerInventory.weight >= weightRequirement)
             {
                 StartCoroutine(toggleable.Deactivate());
             }
