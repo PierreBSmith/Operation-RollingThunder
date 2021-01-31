@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ChadHead
   m_EditorClassIdentifier: 
   partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  weight: 1
+  partAppearance: {fileID: -2671339739580809721, guid: 43d6ae729a2ba09488b9c78526cdb66f,
+    type: 3}

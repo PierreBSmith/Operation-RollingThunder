@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9d16e5b8f00ab4c896f87fffe4f40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundDetector: {fileID: 139518011}
   facingRight: 0
   throwStrengthX: 10
   throwStrengthY: 15
@@ -207,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edcd68c7fa042f4cbd7b61633810191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounce: {fileID: 0}
   _bodyPart: {fileID: 11400000, guid: e2f0633299c8aca40b26ffc1591ca37a, type: 2}
   speed: 5
   _animator: {fileID: 0}
@@ -229,7 +231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
       propertyPath: jumpForce
-      value: 300
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1814591984, guid: 7cf5171ec55713f4db54bc3bd7f07874, type: 3}
       propertyPath: wallCheck

@@ -12499,6 +12499,12 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5}
       - {x: -0.4330127, y: -0.25000003}
       - {x: 0.43301272, y: -0.24999996}
+--- !u!4 &892143786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 139518011, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2116310371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899975682
 GameObject:
   m_ObjectHideFlags: 0
@@ -26801,7 +26807,7 @@ PrefabInstance:
     - target: {fileID: 2658141011419755426, guid: a25ffa04feb6c904ca750aa7cc9e8a3a,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2658141011725019377, guid: a25ffa04feb6c904ca750aa7cc9e8a3a,
         type: 3}
@@ -31159,6 +31165,11 @@ PrefabInstance:
       propertyPath: footsteps
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 381550860683105643, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
+      propertyPath: jumpForce
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6379711593003198768, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
         type: 3}
       propertyPath: m_Name
@@ -31219,6 +31230,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6379711593003198770, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
+        type: 3}
+      propertyPath: GroundDetector
+      value: 
+      objectReference: {fileID: 892143786}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6618d6cfeb83f5f459ef1772beac5d4f, type: 3}
 --- !u!1 &2117822874

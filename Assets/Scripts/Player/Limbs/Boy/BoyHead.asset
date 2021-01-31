@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BoyHead
   m_EditorClassIdentifier: 
   partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  weight: 1
+  partAppearance: {fileID: 21300000, guid: 066b85cd535488e438f6a6cc2d5d7b80, type: 3}

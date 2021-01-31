@@ -174,7 +174,7 @@ public class BodyPartMovement : MonoBehaviour
             _playerMovement.facingRight = true;
             //footsteps.Play();
         }
-        if(Input.GetKey(KeyCode.Space) && isGrounded())
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             _r2D.AddForce(new Vector2(input * speed, jumpForce));
             jumping = true;
@@ -205,7 +205,7 @@ public class BodyPartMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && isGrounded() && !canClimb)
         {
             Debug.Log("Jumping");
-            _r2D.AddForce(new Vector2(input * speed, jumpForce));
+            _r2D.velocity = new Vector2(input * speed, jumpForce);
             jumping = true;
         }
         if (input != 0 && !jumping)
