@@ -43,7 +43,7 @@ public class BodyPartMovement : MonoBehaviour
     private bool isGrounded()
     {
         bool grounded;
-        if(Physics2D.OverlapCircle(GroundDetector.position, 0.5f, whatIsGround))
+        if(Physics2D.OverlapCircle(GroundDetector.position, 1f, whatIsGround))
         {
             grounded = true;
             jumping = false;
