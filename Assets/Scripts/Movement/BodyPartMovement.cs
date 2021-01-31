@@ -5,7 +5,7 @@ using UnityEngine;
 public class BodyPartMovement : MonoBehaviour
 {
     public AudioSource bounce;
-    //public AudioSource footsteps;
+    public AudioSource footsteps;
     [Header("General Variables")]
     public BodyPart _bodyPart;
     [SerializeField] private float speed;
@@ -89,7 +89,8 @@ public class BodyPartMovement : MonoBehaviour
         }
         if(input != 0 && isGrounded())
         {
-            bounce.Play();
+            if(!bounce.isPlaying)
+                bounce.Play();
             _r2D.velocity = new Vector2(speed * input, jumpMultiplier);
         }
     }
@@ -101,12 +102,13 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
-           // footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
-            //footsteps.Play();
+        }
+        if(footsteps.isPlaying && isGrounded() && !canClimb){
+            footsteps.Play();
         }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
         Climb();
@@ -167,20 +169,22 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
-            //footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
-            //footsteps.Play();
         }
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
+            if(!bounce.isPlaying)
+                bounce.Play();
             _r2D.AddForce(new Vector2(input * speed, jumpForce));
             jumping = true;
         }
         if (input != 0 && !jumping)
         {
+            if(!footsteps.isPlaying && isGrounded())
+                footsteps.Play();
             _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
             _animator.SetBool("Walking", true);
         }
@@ -194,22 +198,24 @@ public class BodyPartMovement : MonoBehaviour
         if (input <= 0)
         {
             _playerMovement.facingRight = false;
-           // footsteps.Play();
         }
         else
         {
             _playerMovement.facingRight = true;
-            //footsteps.Play();
         }
         Debug.Log(isGrounded());
         if(Input.GetKey(KeyCode.Space) && isGrounded() && !canClimb)
         {
+            if(!bounce.isPlaying)
+                bounce.Play();
             Debug.Log("Jumping");
             _r2D.velocity = new Vector2(input * speed, jumpForce);
             jumping = true;
         }
         if (input != 0 && !jumping)
         {
+            if(!footsteps.isPlaying && isGrounded() && !canClimb)
+                footsteps.Play();
             _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
             Climb();
             PickUp();
