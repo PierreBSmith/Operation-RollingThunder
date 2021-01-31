@@ -94,6 +94,13 @@ public class PlayerMovement : MonoBehaviour
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 break;
             case BodyState.LEG:
+                foreach(Transform child in transform)
+                {
+                    if(child.name == "Legs")
+                    {
+                        mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
+                    }
+                }
                 mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ARM_HEAD:
@@ -105,12 +112,25 @@ public class PlayerMovement : MonoBehaviour
                 //add throwing
                 break;
             case BodyState.ARM_LEG:
-                mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
+                foreach(Transform child in transform)
+                {
+                    if(child.name == "Legs")
+                    {
+                        mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
+                    }
+                }
+                mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 break;
             case BodyState.ALL_PARTS:
             case BodyState.ARM_LEG_HEAD:
-                mainBodyPart.GetComponent<BodyPartMovement>().ArmMovement();
-                mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
+                foreach(Transform child in transform)
+                {
+                    if(child.name == "Legs")
+                    {
+                        mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
+                    }
+                }
+                mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 //add throwing
                 break;
         }

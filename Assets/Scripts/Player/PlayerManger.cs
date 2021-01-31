@@ -11,10 +11,8 @@ public class PlayerManger : MonoBehaviour
     [SerializeField] private int baseWeight;
 
     private GameObject _nearestBodyPart;
-    
-    
-    
-    private BodyCollection _bodyCollection;
+    public BodyCollection _bodyCollection;
+
     private void Awake()
     {
         _bodyCollection = Instantiate(baseBodyCollection);
