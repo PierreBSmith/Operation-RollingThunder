@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _r2D;
     private GameObject mainBodyPart;
 
+    private const float BELOW_LEGS = -1.5f;
+    private const float BELOW_TORSO = -0.8f;
+    private const float BELOW_HEAD = 0.5f;
+    private Transform GroundDetector;
+
     [HideInInspector] public bool facingRight;
 
     [SerializeField] private float throwStrengthX;
@@ -38,22 +43,26 @@ public class PlayerMovement : MonoBehaviour
                     {
                         //this also takes leg movment, but also head throwing, just an easy check
                         _bodyState = BodyState.ALL_PARTS;
+                        GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                     }
                     else
                     {
                         //if head, torso, leg, then take leg movement
                         _bodyState = BodyState.LEG;
+                        GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                     }
                 }
                 else if(playerInventory.bodyCollection.arms)
                 {
                     //has head, torso, arm, then take torso movement, but throwing enabled
                     _bodyState = BodyState.ARM_HEAD_TORSO;
+                    GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 }
                 else
                 {
                     //only head and torso, take torso movement
                     _bodyState = BodyState.TORSO;
+                    GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
                 }
             }
             else if (playerInventory.bodyCollection.legs)
@@ -62,22 +71,26 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //head leg arm, take leg and arm movement and throwing
                     _bodyState = BodyState.ARM_LEG_HEAD;
+                    GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 }
                 else
                 {
                     //only head and legs
                     _bodyState = BodyState.LEG;
+                    GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
                 }
             }
             else if(playerInventory.bodyCollection.arms)
             {
                 //only head and arm throwing and arm movement
                 _bodyState = BodyState.ARM_HEAD;
+                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
             }
             else
             {
                 //lmao you only head
                 _bodyState = BodyState.HEAD;
+                GroundDetector.transform.position = new Vector2(0, BELOW_HEAD);
             }
         }
     }
