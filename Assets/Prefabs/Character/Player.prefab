@@ -209,13 +209,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounce: {fileID: 0}
+  footsteps: {fileID: 0}
   _bodyPart: {fileID: 11400000, guid: e2f0633299c8aca40b26ffc1591ca37a, type: 2}
+  headroll: {fileID: 0}
   speed: 5
   _animator: {fileID: 0}
   GroundDetector: {fileID: 139518011}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  input: 0
   jumpMultiplier: 2.5
   climbSpeed: 0
   canClimb: 0
