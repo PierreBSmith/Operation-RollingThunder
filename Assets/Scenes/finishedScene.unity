@@ -4095,7 +4095,7 @@ GameObject:
   - component: {fileID: 275774517}
   m_Layer: 0
   m_Name: Vine_1
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21034,7 +21034,7 @@ GameObject:
   - component: {fileID: 1481742309}
   m_Layer: 0
   m_Name: Vine _2
-  m_TagString: Untagged
+  m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31168,7 +31168,7 @@ PrefabInstance:
     - target: {fileID: 381550860683105643, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
         type: 3}
       propertyPath: jumpForce
-      value: 300
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6379711593003198768, guid: 6618d6cfeb83f5f459ef1772beac5d4f,
         type: 3}
