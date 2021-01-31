@@ -24,6 +24,7 @@ public class BodyPartMovement : MonoBehaviour
     private float checkRadius = 0.1f;
     private bool carrying;
     private GameObject canCarryObject;
+    private GameObject carryingObject;
 
     [Header("Leg")]
     [SerializeField] private float jumpForce;
@@ -63,7 +64,6 @@ public class BodyPartMovement : MonoBehaviour
         {
             Debug.Log("Found object");
             canCarryObject = collider.gameObject;
-            Debug.Log(canCarryObject.name);
         }
     }
 
@@ -80,7 +80,7 @@ public class BodyPartMovement : MonoBehaviour
     {
         float input = Input.GetAxis("Horizontal");
         _r2D.constraints = RigidbodyConstraints2D.None;
-        _r2D.velocity = new Vector2(input * speed, 0);
+        _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
     }
 
     public void TorsoMovement()
@@ -98,7 +98,7 @@ public class BodyPartMovement : MonoBehaviour
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
-        _r2D.velocity = new Vector2(input * speed, 0);
+        _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
         if(climbing)
         {
             if(curClimbTime < climbTime)
@@ -143,24 +143,35 @@ public class BodyPartMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator BoxPickUp()
+    {
+        canCarryObject.transform.SetParent(this.gameObject.transform.parent, true);
+        carryingObject = canCarryObject;
+        yield return new WaitForSeconds(1f);
+        carrying = true;
+    }
+
     private void PickUp()
     {
         if(canCarryObject)
         {
             if(Input.GetKey(KeyCode.LeftShift) && !carrying)
             {
-                Debug.Log("Entering carrying");
-                carrying = true;
-                canCarryObject.transform.parent = gameObject.transform.parent;
+               StartCoroutine(BoxPickUp()); 
             }
         }
+    }
+    private IEnumerator BoxPutDown()
+    {
+        carryingObject.transform.SetParent(null, true);
+        yield return new WaitForSeconds(1f);
+        carrying = false;
     }
     private void PutDown()
     {
         if(Input.GetKey(KeyCode.LeftShift) && carrying)
         {
-            carrying = false;
-            canCarryObject.transform.parent = null;
+            StartCoroutine(BoxPutDown());
         }
     }
     
@@ -176,7 +187,7 @@ public class BodyPartMovement : MonoBehaviour
         }
         if (input != 0 && !jumping)
         {
-            _r2D.velocity = new Vector2(speed * input, 0);
+            _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
             _animator.SetBool("Walking", true);
         }
     }

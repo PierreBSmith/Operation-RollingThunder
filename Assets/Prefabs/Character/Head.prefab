@@ -114,11 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodyPart: {fileID: 11400000, guid: d6f0d66fd18084444b1a4b4085b2fa39, type: 2}
   speed: 5
-  jumpMultiplier: 0
-  climbSpeed: 0
-  climbTime: 0
+  jumpMultiplier: 2.5
+  climbSpeed: 3
+  climbTime: 2
   wallCheck: {fileID: 0}
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
-  jumpForce: 0
+    m_Bits: 256
+  jumpForce: 5
