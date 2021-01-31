@@ -16,12 +16,12 @@ public class PartPickup : MonoBehaviour
     private int _colorIndex;
     private readonly int _indexCycles = 6;
 
-    private readonly float _increment = 0.01f;
+    private readonly float _increment = 0.015f;
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteColor = new Color(1f,0f,0f,0f);
+        _spriteColor = new Color(1f,0f,0f,1f);
         ReloadSprite();
     }
 
@@ -67,7 +67,7 @@ public class PartPickup : MonoBehaviour
                 break;
             case 3:
                 // reduce blue
-                _spriteColor.b += _increment;
+                _spriteColor.b -= _increment;
                 if (_spriteColor.b <= 0f)
                 {
                     _spriteColor.b = 0f;
@@ -87,7 +87,7 @@ public class PartPickup : MonoBehaviour
                 break;
             case 5:
                 // reduce green
-                _spriteColor.g += _increment;
+                _spriteColor.g -= _increment;
                 if (_spriteColor.g <= 0f)
                 {
                     _spriteColor.g = 0f;
