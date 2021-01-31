@@ -22,7 +22,7 @@ public class WobblyGround : MonoBehaviour
     {
         _body = GetComponent<Rigidbody2D>();
         _basePosition = transform.position; 
-        _body.bodyType = RigidbodyType2D.Kinematic;
+        _body.bodyType = RigidbodyType2D.Static;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -48,7 +48,7 @@ public class WobblyGround : MonoBehaviour
 
     private void ResetFloor()
     {
-        _body.bodyType = RigidbodyType2D.Kinematic;
+        _body.bodyType = RigidbodyType2D.Static;
         transform.position = _basePosition;
     }
 
