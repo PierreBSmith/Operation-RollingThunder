@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,9 +28,23 @@ public class PressureSwitch : MonoBehaviour
                     if (toggle != null)
                         StartCoroutine(toggle.Activate());
                 }
-                Collider2D box = gameObject.GetComponent<Collider2D>();
-                box.enabled = false;
+                Collider2D buttonBox = gameObject.GetComponent<Collider2D>();
+                buttonBox.enabled = false;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Box"))
+        {
+            foreach (Toggleable toggle in toggleables)
+            {
+                if (toggle != null)
+                    StartCoroutine(toggle.Activate());
+            }
+            Collider2D buttonBox = gameObject.GetComponent<Collider2D>();
+            buttonBox.enabled = false;
         }
     }
 }
