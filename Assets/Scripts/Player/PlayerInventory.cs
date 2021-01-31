@@ -61,7 +61,7 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case BodyPart.PartType.Arms:
                 bodyCollection.arms = newestPart;
-                gameObject.transform.rotation = Quaternion.identity;
+                gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
                 arm.SetActive(true);
                 SpriteRenderer[] armSprites = arm.GetComponentsInChildren<SpriteRenderer>();
                 foreach(SpriteRenderer appearance in armSprites)
@@ -71,9 +71,9 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case BodyPart.PartType.Legs:
                 bodyCollection.legs = newestPart;
+                gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
                 if(OnlyHead())
                 {
-                    gameObject.transform.rotation = Quaternion.identity;
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 leg.SetActive(true);
@@ -85,9 +85,9 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case BodyPart.PartType.Torso:
                 bodyCollection.torso = newestPart;
+                gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
                 if(OnlyHead())
                 {
-                    gameObject.transform.rotation = Quaternion.identity;
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 torso.SetActive(true);
