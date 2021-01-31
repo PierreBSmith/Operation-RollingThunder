@@ -3,19 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManger : MonoBehaviour
+public class PlayerInventory : MonoBehaviour
 {
     public int weight;
-    
+
     [SerializeField] private BodyCollection baseBodyCollection;
     [SerializeField] private int baseWeight;
 
     private GameObject _nearestBodyPart;
-    public BodyCollection _bodyCollection;
+    [HideInInspector] public BodyCollection bodyCollection;
+    [SerializeField] private GameObject head;
+    [SerializeField] private GameObject torso;
+    [SerializeField] private GameObject leg;
+    [SerializeField] private GameObject arm;
 
     private void Awake()
     {
-        _bodyCollection = Instantiate(baseBodyCollection);
+        bodyCollection = Instantiate(baseBodyCollection);
         RecalcWeight();
     }
     
@@ -39,10 +43,10 @@ public class PlayerManger : MonoBehaviour
     private void RecalcWeight()
     {
         weight = baseWeight;
-        weight += _bodyCollection.head != null ? _bodyCollection.head.weight : 0;
-        weight += _bodyCollection.arms != null ? _bodyCollection.arms.weight : 0;
-        weight += _bodyCollection.legs != null ? _bodyCollection.legs.weight : 0;
-        weight += _bodyCollection.torso != null ? _bodyCollection.torso.weight : 0;
+        weight += bodyCollection.head != null ? bodyCollection.head.weight : 0;
+        weight += bodyCollection.arms != null ? bodyCollection.arms.weight : 0;
+        weight += bodyCollection.legs != null ? bodyCollection.legs.weight : 0;
+        weight += bodyCollection.torso != null ? bodyCollection.torso.weight : 0;
     }
 
     private void AddPart()
@@ -51,21 +55,26 @@ public class PlayerManger : MonoBehaviour
         switch (newestPart.partType)
         {
             case BodyPart.PartType.Head:
-                _bodyCollection.head = newestPart;
+                bodyCollection.head = newestPart;
+                head.SetActive(true);
                 break;
             case BodyPart.PartType.Arms:
-                _bodyCollection.arms = newestPart;
+                bodyCollection.arms = newestPart;
+                arm.SetActive(true);
                 break;
             case BodyPart.PartType.Legs:
-                _bodyCollection.legs = newestPart;
+                bodyCollection.legs = newestPart;
+                leg.SetActive(true);
                 break;
             case BodyPart.PartType.Torso:
-                _bodyCollection.torso = newestPart;
+                bodyCollection.torso = newestPart;
+                torso.SetActive(true);
                 break;
         }
         RecalcWeight();
         // Make a call to update the player's body state
         _nearestBodyPart.SetActive(false);
+        GetComponent<PlayerMovement>().SetBodyState();
     }
 
     private void Update()
