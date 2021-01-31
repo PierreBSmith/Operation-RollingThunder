@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b03fc364a81e240a3dad78699528a6, type: 3}
   m_Name: UnicornTorso
   m_EditorClassIdentifier: 
-  partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  partType: 1
+  weight: 4
+  partAppearance: {fileID: 21300000, guid: ef8ad8ee3c0dad34fa220a37d38e958c, type: 3}

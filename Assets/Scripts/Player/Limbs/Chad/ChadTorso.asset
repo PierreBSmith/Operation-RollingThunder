@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b03fc364a81e240a3dad78699528a6, type: 3}
   m_Name: ChadTorso
   m_EditorClassIdentifier: 
-  partType: 0
-  weight: 0
-  partAppearance: {fileID: 0}
+  partType: 1
+  weight: 4
+  partAppearance: {fileID: -1882306389969381953, guid: 43d6ae729a2ba09488b9c78526cdb66f,
+    type: 3}
