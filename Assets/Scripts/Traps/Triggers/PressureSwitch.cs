@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressureToggle : MonoBehaviour
+public class PressureSwitch : MonoBehaviour
 {
     [SerializeField] private int weightRequirement;
     [SerializeField] private Toggleable toggleable;
 
-    private void Awake()
+    private void Start()
     {
-        if (!toggleable)
+        if (toggleable == null)
         {
-            enabled = false;
+            gameObject.SetActive(false);
         }
     }
 
@@ -24,18 +23,8 @@ public class PressureToggle : MonoBehaviour
             if (playerInventory.weight >= weightRequirement)
             {
                 StartCoroutine(toggleable.Activate());
-            }
-        }
-    }
-    
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        PlayerInventory playerInventory;
-        if (other.gameObject.CompareTag("Player") && (playerInventory = other.gameObject.GetComponent<PlayerInventory>()))
-        {
-            if (playerInventory.weight >= weightRequirement)
-            {
-                StartCoroutine(toggleable.Deactivate());
+                Collider2D box = gameObject.GetComponent<Collider2D>();
+                box.enabled = false;
             }
         }
     }
