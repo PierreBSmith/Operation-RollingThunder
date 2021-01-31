@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a565eae3fffd24ba105c73fa0ded92, type: 3}
   m_Name: BaseCollection
   m_EditorClassIdentifier: 
-  head: {fileID: 11400000, guid: d6f0d66fd18084444b1a4b4085b2fa39, type: 2}
+  head: {fileID: 11400000, guid: 9d7a402e0dc0bca43854c0d9187f99c4, type: 2}
   torso: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
