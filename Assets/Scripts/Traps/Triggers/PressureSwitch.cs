@@ -5,11 +5,11 @@ using UnityEngine;
 public class PressureSwitch : MonoBehaviour
 {
     [SerializeField] private int weightRequirement;
-    [SerializeField] private Toggleable toggleable;
+    [SerializeField] private Toggleable[] toggleables;
 
     private void Start()
     {
-        if (toggleable == null)
+        if (toggleables.Length == 0)
         {
             gameObject.SetActive(false);
         }
@@ -22,7 +22,11 @@ public class PressureSwitch : MonoBehaviour
         {
             if (playerInventory.weight >= weightRequirement)
             {
-                StartCoroutine(toggleable.Activate());
+                foreach (Toggleable toggle in toggleables)
+                {
+                    if (toggle != null)
+                        StartCoroutine(toggle.Activate());
+                }
                 Collider2D box = gameObject.GetComponent<Collider2D>();
                 box.enabled = false;
             }

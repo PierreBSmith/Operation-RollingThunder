@@ -6,11 +6,12 @@ using UnityEngine;
 public class PressureButton : MonoBehaviour
 {
     [SerializeField] private int weightRequirement;
-    [SerializeField] private Toggleable toggleable;
+    [SerializeField] private Toggleable[] toggleables;
+    [SerializeField] private float gracePeriod;
 
     private void Start()
     {
-        if (toggleable == null)
+        if (toggleables.Length == 0)
         {
             gameObject.SetActive(false);
         }
@@ -23,7 +24,11 @@ public class PressureButton : MonoBehaviour
         {
             if (playerInventory.weight >= weightRequirement)
             {
-                StartCoroutine(toggleable.Activate());
+                foreach (Toggleable toggle in toggleables)
+                {
+                    if (toggle != null)
+                        StartCoroutine(toggle.Activate());
+                }
             }
         }
     }
@@ -35,7 +40,11 @@ public class PressureButton : MonoBehaviour
         {
             if (playerInventory.weight >= weightRequirement)
             {
-                StartCoroutine(toggleable.Deactivate());
+                foreach (Toggleable toggle in toggleables)
+                {
+                    if (toggle != null)
+                        StartCoroutine(toggle.Deactivate());
+                }
             }
         }
     }

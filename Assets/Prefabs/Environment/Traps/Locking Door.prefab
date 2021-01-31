@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6920040465142132268}
   - component: {fileID: 4668613992171406898}
   m_Layer: 0
-  m_Name: Locking Platform
-  m_TagString: Floor
+  m_Name: Locking Door
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
