@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         switch(_bodyState)
         {
             case BodyState.HEAD:
-                GroundDetector.transform.position = new Vector2(0, BELOW_HEAD);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_HEAD);
                 mainBodyPart.GetComponent<BodyPartMovement>().HeadMovement();
                 break;
             case BodyState.TORSO:
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
-                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().LegMovement();
                 break;
             case BodyState.ARM_HEAD:
@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 ThrowHead();
                 break;
             case BodyState.ARM_HEAD_TORSO:
-                GroundDetector.transform.position = new Vector2(0, BELOW_TORSO);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_TORSO);
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
                 ThrowHead();
                 break;
@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
-                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 break;
             case BodyState.ALL_PARTS:
@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
                         mainBodyPart.GetComponent<BodyPartMovement>().SetLegAnimator(child.gameObject.GetComponent<Animator>());
                     }
                 }
-                GroundDetector.transform.position = new Vector2(0, BELOW_LEGS);
+                GroundDetector.transform.localPosition = new Vector2(0, BELOW_LEGS);
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
                 ThrowHead();
                 break;

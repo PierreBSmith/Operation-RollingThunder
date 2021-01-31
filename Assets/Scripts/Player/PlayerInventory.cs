@@ -57,11 +57,17 @@ public class PlayerInventory : MonoBehaviour
             case BodyPart.PartType.Head:
                 bodyCollection.head = newestPart;
                 head.SetActive(true);
+                head.GetComponent<SpriteRenderer>().sprite = newestPart.partAppearance;
                 break;
             case BodyPart.PartType.Arms:
                 bodyCollection.arms = newestPart;
                 gameObject.transform.rotation = Quaternion.identity;
                 arm.SetActive(true);
+                SpriteRenderer[] armSprites = arm.GetComponentsInChildren<SpriteRenderer>();
+                foreach(SpriteRenderer appearance in armSprites)
+                {
+                    appearance.sprite = newestPart.partAppearance;
+                }
                 break;
             case BodyPart.PartType.Legs:
                 bodyCollection.legs = newestPart;
@@ -71,6 +77,11 @@ public class PlayerInventory : MonoBehaviour
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 leg.SetActive(true);
+                SpriteRenderer[] legSprites = leg.GetComponentsInChildren<SpriteRenderer>();
+                foreach(SpriteRenderer appearance in legSprites)
+                {
+                    appearance.sprite = newestPart.partAppearance;
+                }
                 break;
             case BodyPart.PartType.Torso:
                 bodyCollection.torso = newestPart;
@@ -80,6 +91,7 @@ public class PlayerInventory : MonoBehaviour
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1.3f);
                 }
                 torso.SetActive(true);
+                torso.GetComponent<SpriteRenderer>().sprite = newestPart.partAppearance;
                 break;
         }
         RecalcWeight();
