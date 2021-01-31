@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _r2D;
     private GameObject mainBodyPart;
 
+    [HideInInspector] public bool facingRight;
+
+    [SerializeField] private float throwStrengthX;
+    [SerializeField] private float throwStrengthY;
+
     public enum BodyState
     {
         HEAD,
@@ -81,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //_bodyState = BodyState.HEAD;
         mainBodyPart = gameObject.transform.GetChild(0).gameObject;
+        _r2D = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -105,11 +111,11 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case BodyState.ARM_HEAD:
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmMovement();
-                //add throwing
+                ThrowHead();
                 break;
             case BodyState.ARM_HEAD_TORSO:
                 mainBodyPart.GetComponent<BodyPartMovement>().TorsoMovement();
-                //add throwing
+                ThrowHead();
                 break;
             case BodyState.ARM_LEG:
                 foreach(Transform child in transform)
@@ -131,8 +137,42 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
                 mainBodyPart.GetComponent<BodyPartMovement>().ArmLegMovement();
-                //add throwing
+                ThrowHead();
                 break;
         }
+    }
+
+    private void ThrowHead()
+    {
+        if(!mainBodyPart.GetComponent<BodyPartMovement>().carrying)
+        {
+            if(Input.GetKey(KeyCode.Q))
+            {
+                //removes all body parts that are not head.
+                foreach(Transform child in transform)
+                {
+                    if(child.gameObject.name != "Head")
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                }
+                //launches head
+                StartCoroutine(LaunchHead());
+            }
+        }
+    }
+
+    private IEnumerator LaunchHead()
+    {
+        _bodyState = BodyState.HEAD;
+        if(facingRight)
+        {
+            _r2D.velocity = new Vector2(throwStrengthX, throwStrengthY);
+        }
+        else
+        {
+            _r2D.velocity = new Vector2(-throwStrengthX, throwStrengthY);
+        }
+        yield return new WaitForSeconds(1f);
     }
 }

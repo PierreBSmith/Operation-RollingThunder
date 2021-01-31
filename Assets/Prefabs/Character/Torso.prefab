@@ -141,8 +141,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3981441466905994138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f487975ac68e7f643a1d02d4173ab00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1edcd68c7fa042f4cbd7b61633810191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  jumpMultiplier: 3
+  _bodyPart: {fileID: 11400000, guid: e2f0633299c8aca40b26ffc1591ca37a, type: 2}
+  speed: 0
+  _animator: {fileID: 0}
+  jumpMultiplier: 2.5
+  climbSpeed: 0
+  jumpForce: 0

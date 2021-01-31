@@ -10,6 +10,7 @@ public class BodyPartMovement : MonoBehaviour
     private bool grounded;
     private Rigidbody2D _r2D;
     [HideInInspector] public Animator _animator;
+    private PlayerMovement _playerMovement;
 
     [Header("Torso")]
     [SerializeField] private float jumpMultiplier;
@@ -17,7 +18,7 @@ public class BodyPartMovement : MonoBehaviour
     [Header("Arm")]
     [SerializeField] private float climbSpeed;
     private bool climbing;
-    private bool carrying;
+    [HideInInspector] public bool carrying;
     private GameObject canCarryObject;
     private GameObject carryingObject;
 
@@ -31,6 +32,8 @@ public class BodyPartMovement : MonoBehaviour
         _r2D = transform.parent.gameObject.GetComponent<Rigidbody2D>();
         climbing = false;
         carrying = false;
+
+        _playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
     }
 
     void OnCollisionStay2D(Collision2D collider)
@@ -73,6 +76,14 @@ public class BodyPartMovement : MonoBehaviour
     public void HeadMovement()
     {
         float input = Input.GetAxis("Horizontal");
+        if (input <= 0)
+        {
+            _playerMovement.facingRight = false;
+        }
+        else
+        {
+            _playerMovement.facingRight = true;
+        }
         _r2D.constraints = RigidbodyConstraints2D.None;
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
     }
@@ -81,6 +92,14 @@ public class BodyPartMovement : MonoBehaviour
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
+        if (input <= 0)
+        {
+            _playerMovement.facingRight = false;
+        }
+        else
+        {
+            _playerMovement.facingRight = true;
+        }
         if(input != 0 && grounded)
         {
             _r2D.velocity = new Vector2(speed * input, jumpMultiplier);
@@ -92,6 +111,14 @@ public class BodyPartMovement : MonoBehaviour
     {
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
+        if (input <= 0)
+        {
+            _playerMovement.facingRight = false;
+        }
+        else
+        {
+            _playerMovement.facingRight = true;
+        }
         _r2D.velocity = new Vector2(input * speed, _r2D.velocity.y);
         //Climb();
         PickUp();
@@ -148,6 +175,14 @@ public class BodyPartMovement : MonoBehaviour
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
+        if (input <= 0)
+        {
+            _playerMovement.facingRight = false;
+        }
+        else
+        {
+            _playerMovement.facingRight = true;
+        }
         if(Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
@@ -165,6 +200,14 @@ public class BodyPartMovement : MonoBehaviour
         _r2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         float input = Input.GetAxis("Horizontal");
         _animator.SetBool("Walking", false);
+        if (input <= 0)
+        {
+            _playerMovement.facingRight = false;
+        }
+        else
+        {
+            _playerMovement.facingRight = true;
+        }
         if(Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
