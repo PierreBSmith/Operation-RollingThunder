@@ -11,8 +11,16 @@ public class WinCondition : MonoBehaviour
             if(collider.gameObject.transform.parent.gameObject.GetComponent<PlayerMovement>()._bodyState == 
             PlayerMovement.BodyState.ALL_PARTS)
             {
-                Application.Quit();
+                StartCoroutine(Win());
             }
         }
+    }
+
+    private IEnumerator Win()
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealTime(3);
+        Time.timeScale = 1;
+        Application.Quit();
     }
 }

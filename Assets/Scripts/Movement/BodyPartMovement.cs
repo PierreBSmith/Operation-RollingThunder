@@ -30,7 +30,6 @@ public class BodyPartMovement : MonoBehaviour
 
     [Header("Leg")]
     [SerializeField] private float jumpForce;
-    private bool jumping;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +47,6 @@ public class BodyPartMovement : MonoBehaviour
         if(Physics2D.OverlapCircle(GroundDetector.position, 1f, whatIsGround))
         {
             grounded = true;
-            jumping = false;
         }
         else
         {
@@ -184,8 +182,7 @@ public class BodyPartMovement : MonoBehaviour
         {
             if(!bounce.isPlaying)
                 bounce.Play();
-            _r2D.AddForce(new Vector2(_r2D.velocity.x, jumpForce));
-            jumping = true;
+            _r2D.velocity = new Vector2(_r2D.velocity.x, jumpForce);
         }
         if (input != 0)
         {
@@ -216,7 +213,6 @@ public class BodyPartMovement : MonoBehaviour
                 bounce.Play();
             Debug.Log("Jumping");
             _r2D.velocity = new Vector2(_r2D.velocity.x, jumpForce);
-            jumping = true;
         }
         if (input != 0)
         {
