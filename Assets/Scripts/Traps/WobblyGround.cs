@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using Packages.Rider.Editor.UnitTesting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Collider2D))]
@@ -21,10 +18,10 @@ public class WobblyGround : MonoBehaviour
     private void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
-        _basePosition = transform.position; 
+        _basePosition = transform.position;
         _body.bodyType = RigidbodyType2D.Static;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
