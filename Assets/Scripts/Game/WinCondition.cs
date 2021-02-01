@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
+    public AudioSource youWin;
     void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("Player"))
@@ -18,8 +19,9 @@ public class WinCondition : MonoBehaviour
 
     private IEnumerator Win()
     {
+        youWin.Play();
         Time.timeScale = 0;
-        yield return new WaitForSecondsRealTime(3);
+        yield return new WaitForSecondsRealtime(3);
         Time.timeScale = 1;
         Application.Quit();
     }
