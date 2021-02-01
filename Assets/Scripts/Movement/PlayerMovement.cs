@@ -191,6 +191,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator LaunchHead()
     {
         _bodyState = BodyState.HEAD;
+        playerInventory.weight = 1;
         if(facingRight)
         {
             _r2D.velocity = new Vector2(throwStrengthX, throwStrengthY);
